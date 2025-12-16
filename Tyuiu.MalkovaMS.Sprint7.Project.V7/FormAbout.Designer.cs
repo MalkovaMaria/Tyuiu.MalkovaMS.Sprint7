@@ -28,12 +28,65 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FormAbout";
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAbout));
+            labelAbout_MMS = new Label();
+            pictureBoxPhoto_MMS = new PictureBox();
+            buttonOk_MMS = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxPhoto_MMS).BeginInit();
+            SuspendLayout();
+            // 
+            // labelAbout_MMS
+            // 
+            labelAbout_MMS.AutoSize = true;
+            labelAbout_MMS.Location = new Point(230, 12);
+            labelAbout_MMS.Name = "labelAbout_MMS";
+            labelAbout_MMS.Size = new Size(457, 250);
+            labelAbout_MMS.TabIndex = 0;
+            labelAbout_MMS.Text = resources.GetString("labelAbout_MMS.Text");
+            // 
+            // pictureBoxPhoto_MMS
+            // 
+            pictureBoxPhoto_MMS.Image = (Image)resources.GetObject("pictureBoxPhoto_MMS.Image");
+            pictureBoxPhoto_MMS.Location = new Point(12, 12);
+            pictureBoxPhoto_MMS.Name = "pictureBoxPhoto_MMS";
+            pictureBoxPhoto_MMS.Size = new Size(203, 303);
+            pictureBoxPhoto_MMS.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxPhoto_MMS.TabIndex = 1;
+            pictureBoxPhoto_MMS.TabStop = false;
+            // 
+            // buttonOk_MMS
+            // 
+            buttonOk_MMS.BackgroundImageLayout = ImageLayout.Stretch;
+            buttonOk_MMS.FlatStyle = FlatStyle.System;
+            buttonOk_MMS.Location = new Point(548, 279);
+            buttonOk_MMS.Name = "buttonOk_MMS";
+            buttonOk_MMS.Size = new Size(139, 36);
+            buttonOk_MMS.TabIndex = 2;
+            buttonOk_MMS.Text = "OK";
+            buttonOk_MMS.UseVisualStyleBackColor = true;
+            // 
+            // FormAbout
+            // 
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(722, 327);
+            Controls.Add(buttonOk_MMS);
+            Controls.Add(pictureBoxPhoto_MMS);
+            Controls.Add(labelAbout_MMS);
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "FormAbout";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "FormAbout";
+            ((System.ComponentModel.ISupportInitialize)pictureBoxPhoto_MMS).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label labelAbout_MMS;
+        private PictureBox pictureBoxPhoto_MMS;
+        private Button buttonOk_MMS;
     }
 }
