@@ -52,10 +52,10 @@
             ColumnPay_MMS = new DataGridViewTextBoxColumn();
             panelTools_MMS = new Panel();
             groupBoxFilter_MMS = new GroupBox();
+            comboBoxColumn_MMS = new ComboBox();
             buttonFilter_MMS = new Button();
             textBoxFilterKey_MMS = new TextBox();
             labelFilterKey_MMS = new Label();
-            textBoxFilterCol_MMS = new TextBox();
             labelFilterCol_MMS = new Label();
             groupBoxFind_MMS = new GroupBox();
             textBoxFindKey_MMS = new TextBox();
@@ -193,6 +193,7 @@
             dataGridViewTable_MMS.Dock = DockStyle.Fill;
             dataGridViewTable_MMS.Location = new Point(0, 0);
             dataGridViewTable_MMS.Name = "dataGridViewTable_MMS";
+            dataGridViewTable_MMS.ReadOnly = true;
             dataGridViewTable_MMS.RowHeadersVisible = false;
             dataGridViewTable_MMS.Size = new Size(1215, 476);
             dataGridViewTable_MMS.TabIndex = 0;
@@ -202,48 +203,56 @@
             ColumnAppartment_MMS.FillWeight = 66.0066147F;
             ColumnAppartment_MMS.HeaderText = "Квартира";
             ColumnAppartment_MMS.Name = "ColumnAppartment_MMS";
+            ColumnAppartment_MMS.ReadOnly = true;
             // 
             // ColumnPloshad_MMS
             // 
             ColumnPloshad_MMS.FillWeight = 77.42056F;
             ColumnPloshad_MMS.HeaderText = "Общая площадь";
             ColumnPloshad_MMS.Name = "ColumnPloshad_MMS";
+            ColumnPloshad_MMS.ReadOnly = true;
             // 
             // ColumnRooms_MMS
             // 
             ColumnRooms_MMS.FillWeight = 87.89277F;
             ColumnRooms_MMS.HeaderText = "Количество комнат";
             ColumnRooms_MMS.Name = "ColumnRooms_MMS";
+            ColumnRooms_MMS.ReadOnly = true;
             // 
             // ColumnFamilia_MMS
             // 
             ColumnFamilia_MMS.FillWeight = 97.50092F;
             ColumnFamilia_MMS.HeaderText = "Фамилия";
             ColumnFamilia_MMS.Name = "ColumnFamilia_MMS";
+            ColumnFamilia_MMS.ReadOnly = true;
             // 
             // ColumnDate_MMS
             // 
             ColumnDate_MMS.FillWeight = 106.316338F;
             ColumnDate_MMS.HeaderText = "Дата прописки";
             ColumnDate_MMS.Name = "ColumnDate_MMS";
+            ColumnDate_MMS.ReadOnly = true;
             // 
             // ColumnPeople_MMS
             // 
             ColumnPeople_MMS.FillWeight = 114.40435F;
             ColumnPeople_MMS.HeaderText = "Кол-во членов семьи";
             ColumnPeople_MMS.Name = "ColumnPeople_MMS";
+            ColumnPeople_MMS.ReadOnly = true;
             // 
             // ColumnKids_MMS
             // 
             ColumnKids_MMS.FillWeight = 121.8251F;
             ColumnKids_MMS.HeaderText = "Кол-во детей";
             ColumnKids_MMS.Name = "ColumnKids_MMS";
+            ColumnKids_MMS.ReadOnly = true;
             // 
             // ColumnPay_MMS
             // 
             ColumnPay_MMS.FillWeight = 128.63353F;
             ColumnPay_MMS.HeaderText = "Наличие долга";
             ColumnPay_MMS.Name = "ColumnPay_MMS";
+            ColumnPay_MMS.ReadOnly = true;
             // 
             // panelTools_MMS
             // 
@@ -261,10 +270,10 @@
             // 
             // groupBoxFilter_MMS
             // 
+            groupBoxFilter_MMS.Controls.Add(comboBoxColumn_MMS);
             groupBoxFilter_MMS.Controls.Add(buttonFilter_MMS);
             groupBoxFilter_MMS.Controls.Add(textBoxFilterKey_MMS);
             groupBoxFilter_MMS.Controls.Add(labelFilterKey_MMS);
-            groupBoxFilter_MMS.Controls.Add(textBoxFilterCol_MMS);
             groupBoxFilter_MMS.Controls.Add(labelFilterCol_MMS);
             groupBoxFilter_MMS.Location = new Point(693, 3);
             groupBoxFilter_MMS.Name = "groupBoxFilter_MMS";
@@ -272,6 +281,14 @@
             groupBoxFilter_MMS.TabIndex = 3;
             groupBoxFilter_MMS.TabStop = false;
             groupBoxFilter_MMS.Text = "Фильтрация";
+            // 
+            // comboBoxColumn_MMS
+            // 
+            comboBoxColumn_MMS.FormattingEnabled = true;
+            comboBoxColumn_MMS.Location = new Point(6, 46);
+            comboBoxColumn_MMS.Name = "comboBoxColumn_MMS";
+            comboBoxColumn_MMS.Size = new Size(144, 27);
+            comboBoxColumn_MMS.TabIndex = 5;
             // 
             // buttonFilter_MMS
             // 
@@ -299,13 +316,6 @@
             labelFilterKey_MMS.Size = new Size(146, 20);
             labelFilterKey_MMS.TabIndex = 2;
             labelFilterKey_MMS.Text = "Ключ для фильтра:";
-            // 
-            // textBoxFilterCol_MMS
-            // 
-            textBoxFilterCol_MMS.Location = new Point(6, 46);
-            textBoxFilterCol_MMS.Name = "textBoxFilterCol_MMS";
-            textBoxFilterCol_MMS.Size = new Size(144, 27);
-            textBoxFilterCol_MMS.TabIndex = 1;
             // 
             // labelFilterCol_MMS
             // 
@@ -402,6 +412,7 @@
             buttonRefresh_MMS.Size = new Size(58, 58);
             buttonRefresh_MMS.TabIndex = 1;
             buttonRefresh_MMS.UseVisualStyleBackColor = false;
+            buttonRefresh_MMS.Click += buttonRefresh_MMS_Click;
             // 
             // buttonEditRow_MMS
             // 
@@ -412,6 +423,7 @@
             buttonEditRow_MMS.Size = new Size(58, 58);
             buttonEditRow_MMS.TabIndex = 4;
             buttonEditRow_MMS.UseVisualStyleBackColor = false;
+            buttonEditRow_MMS.Click += buttonEditRow_MMS_Click;
             // 
             // buttonDelRow_MMS
             // 
@@ -422,6 +434,7 @@
             buttonDelRow_MMS.Size = new Size(58, 58);
             buttonDelRow_MMS.TabIndex = 3;
             buttonDelRow_MMS.UseVisualStyleBackColor = false;
+            buttonDelRow_MMS.Click += buttonDelRow_MMS_Click;
             // 
             // buttonAddRow_MMS
             // 
@@ -432,6 +445,7 @@
             buttonAddRow_MMS.Size = new Size(58, 58);
             buttonAddRow_MMS.TabIndex = 2;
             buttonAddRow_MMS.UseVisualStyleBackColor = false;
+            buttonAddRow_MMS.Click += buttonAddRow_MMS_Click;
             // 
             // tabPagePayInfo_MMS
             // 
@@ -967,7 +981,6 @@
         private GroupBox groupBoxFilter_MMS;
         private TextBox textBoxFilterKey_MMS;
         private Label labelFilterKey_MMS;
-        private TextBox textBoxFilterCol_MMS;
         private Label labelFilterCol_MMS;
         private Button buttonFilter_MMS;
         private Panel panelMain_MMS;
@@ -1024,5 +1037,6 @@
         private DataGridViewTextBoxColumn ColumnPay_MMS;
         private OpenFileDialog openFileDialog_MMS;
         private SaveFileDialog saveFileDialog_MMS;
+        private ComboBox comboBoxColumn_MMS;
     }
 }
