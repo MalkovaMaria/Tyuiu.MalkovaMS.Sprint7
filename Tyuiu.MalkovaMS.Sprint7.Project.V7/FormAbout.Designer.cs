@@ -38,18 +38,20 @@
             // labelAbout_MMS
             // 
             labelAbout_MMS.AutoSize = true;
-            labelAbout_MMS.Location = new Point(230, 12);
+            labelAbout_MMS.Location = new Point(161, 7);
+            labelAbout_MMS.Margin = new Padding(2, 0, 2, 0);
             labelAbout_MMS.Name = "labelAbout_MMS";
-            labelAbout_MMS.Size = new Size(457, 250);
+            labelAbout_MMS.Size = new Size(303, 150);
             labelAbout_MMS.TabIndex = 0;
             labelAbout_MMS.Text = resources.GetString("labelAbout_MMS.Text");
             // 
             // pictureBoxPhoto_MMS
             // 
             pictureBoxPhoto_MMS.Image = (Image)resources.GetObject("pictureBoxPhoto_MMS.Image");
-            pictureBoxPhoto_MMS.Location = new Point(12, 12);
+            pictureBoxPhoto_MMS.Location = new Point(8, 7);
+            pictureBoxPhoto_MMS.Margin = new Padding(2, 2, 2, 2);
             pictureBoxPhoto_MMS.Name = "pictureBoxPhoto_MMS";
-            pictureBoxPhoto_MMS.Size = new Size(203, 303);
+            pictureBoxPhoto_MMS.Size = new Size(142, 182);
             pictureBoxPhoto_MMS.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxPhoto_MMS.TabIndex = 1;
             pictureBoxPhoto_MMS.TabStop = false;
@@ -58,21 +60,24 @@
             // 
             buttonOk_MMS.BackgroundImageLayout = ImageLayout.Stretch;
             buttonOk_MMS.FlatStyle = FlatStyle.System;
-            buttonOk_MMS.Location = new Point(548, 279);
+            buttonOk_MMS.Location = new Point(384, 167);
+            buttonOk_MMS.Margin = new Padding(2, 2, 2, 2);
             buttonOk_MMS.Name = "buttonOk_MMS";
-            buttonOk_MMS.Size = new Size(139, 36);
+            buttonOk_MMS.Size = new Size(97, 22);
             buttonOk_MMS.TabIndex = 2;
             buttonOk_MMS.Text = "OK";
             buttonOk_MMS.UseVisualStyleBackColor = true;
+            buttonOk_MMS.Click += buttonOk_MMS_Click;
             // 
             // FormAbout
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(722, 327);
+            ClientSize = new Size(505, 196);
             Controls.Add(buttonOk_MMS);
             Controls.Add(pictureBoxPhoto_MMS);
             Controls.Add(labelAbout_MMS);
+            Margin = new Padding(2, 2, 2, 2);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormAbout";
