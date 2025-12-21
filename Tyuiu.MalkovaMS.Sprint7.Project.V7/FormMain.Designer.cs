@@ -36,8 +36,6 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             tabControlMain_MMS = new TabControl();
             tabPageBase_MMS = new TabPage();
             panelMain_MMS = new Panel();
@@ -100,7 +98,7 @@
             chartKidsStat_MMS = new System.Windows.Forms.DataVisualization.Charting.Chart();
             panelLeftStat_MMS = new Panel();
             groupBoxPayStat_MMS = new GroupBox();
-            chartPays_MMS = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            panelBars_MMS = new Panel();
             groupBoxMainMetrics_MMS = new GroupBox();
             labelMaksPloshad_MMS = new Label();
             labelMinPloshad_MMS = new Label();
@@ -150,7 +148,6 @@
             ((System.ComponentModel.ISupportInitialize)chartKidsStat_MMS).BeginInit();
             panelLeftStat_MMS.SuspendLayout();
             groupBoxPayStat_MMS.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)chartPays_MMS).BeginInit();
             groupBoxMainMetrics_MMS.SuspendLayout();
             panelHeaderStat_MMS.SuspendLayout();
             menuStripMain_MMS.SuspendLayout();
@@ -479,11 +476,11 @@
             tabPagePayInfo_MMS.BackColor = SystemColors.ControlLightLight;
             tabPagePayInfo_MMS.Controls.Add(panelMainPay_MMS);
             tabPagePayInfo_MMS.Controls.Add(panelTopPay_MMS);
-            tabPagePayInfo_MMS.Location = new Point(4, 29);
+            tabPagePayInfo_MMS.Location = new Point(4, 24);
             tabPagePayInfo_MMS.Margin = new Padding(4);
             tabPagePayInfo_MMS.Name = "tabPagePayInfo_MMS";
             tabPagePayInfo_MMS.Padding = new Padding(4);
-            tabPagePayInfo_MMS.Size = new Size(1223, 590);
+            tabPagePayInfo_MMS.Size = new Size(1223, 595);
             tabPagePayInfo_MMS.TabIndex = 1;
             tabPagePayInfo_MMS.Text = "Информация о платежах";
             // 
@@ -493,7 +490,7 @@
             panelMainPay_MMS.Dock = DockStyle.Fill;
             panelMainPay_MMS.Location = new Point(4, 113);
             panelMainPay_MMS.Name = "panelMainPay_MMS";
-            panelMainPay_MMS.Size = new Size(1215, 473);
+            panelMainPay_MMS.Size = new Size(1215, 478);
             panelMainPay_MMS.TabIndex = 2;
             // 
             // dataGridViewPayStat_MMS
@@ -507,7 +504,7 @@
             dataGridViewPayStat_MMS.Name = "dataGridViewPayStat_MMS";
             dataGridViewPayStat_MMS.ReadOnly = true;
             dataGridViewPayStat_MMS.RowHeadersVisible = false;
-            dataGridViewPayStat_MMS.Size = new Size(1215, 473);
+            dataGridViewPayStat_MMS.Size = new Size(1215, 478);
             dataGridViewPayStat_MMS.TabIndex = 0;
             // 
             // ColumnNumberPay_MMS
@@ -758,6 +755,7 @@
             chartTypesStat_MMS.Legends.Add(legend1);
             chartTypesStat_MMS.Location = new Point(3, 23);
             chartTypesStat_MMS.Name = "chartTypesStat_MMS";
+            chartTypesStat_MMS.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series1.Legend = "Legend1";
@@ -787,8 +785,10 @@
             chartKidsStat_MMS.Legends.Add(legend2);
             chartKidsStat_MMS.Location = new Point(3, 23);
             chartKidsStat_MMS.Name = "chartKidsStat_MMS";
+            chartKidsStat_MMS.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Font = new Font("Segoe UI Semibold", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 204);
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             chartKidsStat_MMS.Series.Add(series2);
@@ -809,7 +809,7 @@
             // 
             // groupBoxPayStat_MMS
             // 
-            groupBoxPayStat_MMS.Controls.Add(chartPays_MMS);
+            groupBoxPayStat_MMS.Controls.Add(panelBars_MMS);
             groupBoxPayStat_MMS.Dock = DockStyle.Fill;
             groupBoxPayStat_MMS.Location = new Point(0, 262);
             groupBoxPayStat_MMS.Name = "groupBoxPayStat_MMS";
@@ -818,19 +818,14 @@
             groupBoxPayStat_MMS.TabStop = false;
             groupBoxPayStat_MMS.Text = "Платежи за ноябрь 2025";
             // 
-            // chartPays_MMS
+            // panelBars_MMS
             // 
-            chartArea3.Name = "ChartArea1";
-            chartPays_MMS.ChartAreas.Add(chartArea3);
-            chartPays_MMS.Dock = DockStyle.Fill;
-            chartPays_MMS.Location = new Point(3, 23);
-            chartPays_MMS.Name = "chartPays_MMS";
-            series3.ChartArea = "ChartArea1";
-            series3.Name = "Series1";
-            chartPays_MMS.Series.Add(series3);
-            chartPays_MMS.Size = new Size(612, 249);
-            chartPays_MMS.TabIndex = 0;
-            chartPays_MMS.Text = "chart1";
+            panelBars_MMS.Dock = DockStyle.Fill;
+            panelBars_MMS.Location = new Point(3, 23);
+            panelBars_MMS.Name = "panelBars_MMS";
+            panelBars_MMS.Size = new Size(612, 249);
+            panelBars_MMS.TabIndex = 0;
+            panelBars_MMS.Paint += panelBars_MMS_Paint;
             // 
             // groupBoxMainMetrics_MMS
             // 
@@ -1052,7 +1047,6 @@
             ((System.ComponentModel.ISupportInitialize)chartKidsStat_MMS).EndInit();
             panelLeftStat_MMS.ResumeLayout(false);
             groupBoxPayStat_MMS.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)chartPays_MMS).EndInit();
             groupBoxMainMetrics_MMS.ResumeLayout(false);
             groupBoxMainMetrics_MMS.PerformLayout();
             panelHeaderStat_MMS.ResumeLayout(false);
@@ -1138,7 +1132,6 @@
         private DataGridViewTextBoxColumn ColumnPeriod_MMS;
         private DataGridViewTextBoxColumn ColumnSumPay_MMS;
         private DataGridViewTextBoxColumn ColumnStatPay_MMS;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartPays_MMS;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartTypesStat_MMS;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartKidsStat_MMS;
         private OpenFileDialog openFileDialog_MMS;
@@ -1161,5 +1154,6 @@
         private Button buttonFilterPay_MMS;
         private Label labelStatusPay_MMS;
         private Button buttonMarkPaid_MMS;
+        private Panel panelBars_MMS;
     }
 }

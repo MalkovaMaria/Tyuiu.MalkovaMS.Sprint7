@@ -53,6 +53,8 @@ namespace Tyuiu.MalkovaMS.Sprint7.Project.V7
                 }
                 MessageBox.Show("Данные успешно загружены!", "Успех",
                                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+                UpdateStatistics();
+                UpdateCharts();
             }
             catch (Exception ex)
             {
@@ -60,6 +62,7 @@ namespace Tyuiu.MalkovaMS.Sprint7.Project.V7
                                 "Ошибка",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
         private void buttonSaveFile_MMS_Click(object sender, EventArgs e)
@@ -137,6 +140,8 @@ namespace Tyuiu.MalkovaMS.Sprint7.Project.V7
                     dataGridViewTable_MMS.ClearSelection();
                     dataGridViewTable_MMS.Rows[newRowIndex].Selected = true;
                 }
+                UpdateStatistics();
+                UpdateCharts();
             }
             catch (Exception ex)
             {
@@ -170,6 +175,8 @@ namespace Tyuiu.MalkovaMS.Sprint7.Project.V7
                     MessageBoxIcon.Information
                 );
             }
+            UpdateStatistics();
+            UpdateCharts();
         }
 
         private void buttonDelRow_MMS_Click(object sender, EventArgs e)
@@ -202,7 +209,8 @@ namespace Tyuiu.MalkovaMS.Sprint7.Project.V7
                 MessageBox.Show("Строка успешно удалена!", "Успех",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-
+                UpdateStatistics();
+                UpdateCharts();
             }
             catch (Exception ex)
             {
@@ -229,6 +237,8 @@ namespace Tyuiu.MalkovaMS.Sprint7.Project.V7
                 }
                 MessageBox.Show("Данные успешно обновлены!", "Успех",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
+                UpdateStatistics();
+                UpdateCharts();
             }
             catch (Exception ex)
             {
@@ -359,6 +369,8 @@ namespace Tyuiu.MalkovaMS.Sprint7.Project.V7
                 }
                 MessageBox.Show("Данные успешно загружены!", "Успех",
                                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+                UpdateStatistics();
+                UpdateCharts();
             }
             catch (Exception ex)
             {
@@ -427,6 +439,8 @@ namespace Tyuiu.MalkovaMS.Sprint7.Project.V7
                     dataGridViewPayStat_MMS.ClearSelection();
                     dataGridViewPayStat_MMS.Rows[newRowIndex].Selected = true;
                 }
+                UpdateStatistics();
+                UpdateCharts();
             }
             catch (Exception ex)
             {
@@ -460,6 +474,8 @@ namespace Tyuiu.MalkovaMS.Sprint7.Project.V7
                     MessageBoxIcon.Information
                 );
             }
+            UpdateStatistics();
+            UpdateCharts();
         }
 
         private void buttonDelRowPay_MMS_Click(object sender, EventArgs e)
@@ -490,6 +506,8 @@ namespace Tyuiu.MalkovaMS.Sprint7.Project.V7
                 dataGridViewPayStat_MMS.ClearSelection();
                 MessageBox.Show("Строка успешно удалена!", "Успех",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
+                UpdateStatistics();
+                UpdateCharts();
             }
             catch (Exception ex)
             {
@@ -517,6 +535,8 @@ namespace Tyuiu.MalkovaMS.Sprint7.Project.V7
 
                 MessageBox.Show("Данные успешно обновлены!", "Успех",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
+                UpdateStatistics();
+                UpdateCharts();
             }
             catch (Exception ex)
             {
@@ -574,6 +594,7 @@ namespace Tyuiu.MalkovaMS.Sprint7.Project.V7
             {
                 dataGridViewPayStat_MMS.Rows.Add(row);
             }
+
         }
 
         private void buttonClearFilterPay_MMS_Click(object sender, EventArgs e)
@@ -607,6 +628,241 @@ namespace Tyuiu.MalkovaMS.Sprint7.Project.V7
             else
             {
                 MessageBox.Show("Только долг можно отметить как оплаченный.");
+            }
+            UpdateStatistics();
+            UpdateCharts();
+        }
+
+        private void UpdateStatistics()
+        {
+            if (dataGridViewTable_MMS.Rows.Count == 0)
+            {
+                labelAllKv_MMS.Text = "Всего квартир: 0";
+                labelAllPeople_MMS.Text = "Всего жильцов: 0";
+                labelSrPloshad_MMS.Text = "Средняя площадь квартиры: 0 м";
+                labelMinPloshad_MMS.Text = "Минимальная площадь квартиры: 0 м";
+                labelMaksPloshad_MMS.Text = "Максимальная площадь квартиры: 0 м";
+                return;
+            }
+
+            int totalApartments = dataGridViewTable_MMS.Rows.Count;
+            int totalPeople = 0;
+            double sumArea = 0;
+            double minArea = double.MaxValue;
+            double maxArea = double.MinValue;
+            int validAreaCount = 0;
+
+            foreach (DataGridViewRow row in dataGridViewTable_MMS.Rows)
+            {
+                if (row.IsNewRow) continue;
+                if (int.TryParse(row.Cells[5].Value?.ToString(), out int people))
+                    totalPeople += people;
+                string areaStr = row.Cells[1].Value?.ToString();
+                if (!string.IsNullOrEmpty(areaStr) &&
+                    double.TryParse(areaStr, System.Globalization.NumberStyles.Float,
+                                   System.Globalization.CultureInfo.InvariantCulture,
+                                   out double area))
+                {
+                    sumArea += area;
+                    if (area < minArea) minArea = area;
+                    if (area > maxArea) maxArea = area;
+                    validAreaCount++;
+                }
+            }
+
+            double avgArea = validAreaCount > 0 ? sumArea / validAreaCount : 0;
+
+            labelAllKv_MMS.Text = $"Всего квартир: {totalApartments}";
+            labelAllPeople_MMS.Text = $"Всего жильцов: {totalPeople}";
+            labelSrPloshad_MMS.Text = $"Средняя площадь квартиры (кв. м.): {avgArea:F1}";
+            labelMinPloshad_MMS.Text = $"Минимальная площадь квартиры (кв. м.): {(minArea == double.MaxValue ? 0 : minArea):F1}";
+            labelMaksPloshad_MMS.Text = $"Максимальная площадь квартиры (кв. м.): {(maxArea == double.MinValue ? 0 : maxArea):F1}";
+        }
+        private void UpdateCharts()
+        {
+            UpdateKidsChart();
+            UpdateApartmentTypesChart();
+            DrawBarChart();
+        }
+
+        private void UpdateKidsChart()
+        {
+            chartKidsStat_MMS.Series.Clear();
+            chartKidsStat_MMS.Titles.Clear();
+            var series = new System.Windows.Forms.DataVisualization.Charting.Series
+            {
+                Name = "Дети",
+                ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie
+            };
+            chartKidsStat_MMS.Series.Add(series);
+            var kidsCount = new Dictionary<int, int>();
+
+            foreach (DataGridViewRow row in dataGridViewTable_MMS.Rows)
+            {
+                if (row.IsNewRow) continue;
+
+                if (int.TryParse(row.Cells[6].Value?.ToString(), out int kids))
+                {
+                    if (kids < 0) kids = 0;
+                    if (!kidsCount.ContainsKey(kids))
+                        kidsCount[kids] = 0;
+                    kidsCount[kids]++;
+                }
+            }
+            if (kidsCount.TryGetValue(0, out int noKids))
+            {
+                series.Points.AddXY("Нет детей", noKids);
+            }
+            var sortedKeys = kidsCount.Keys.Where(k => k > 0).OrderBy(k => k);
+            foreach (int count in sortedKeys)
+            {
+                string label = count switch
+                {
+                    1 => "1 ребёнок",
+                    2 => "2 ребенка",
+                    3 => "3 ребенка",
+                    4 => "4 ребенка",
+                    5 => "5 детей",
+                    _ => $"{count} детей"
+                };
+                series.Points.AddXY(label, kidsCount[count]);
+            }
+        }
+
+        private void UpdateApartmentTypesChart()
+        {
+            chartTypesStat_MMS.Series.Clear();
+            chartTypesStat_MMS.Titles.Clear();
+            var series = new System.Windows.Forms.DataVisualization.Charting.Series
+            {
+                Name = "Типы квартир",
+                ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie
+            };
+            chartTypesStat_MMS.Series.Add(series);
+
+            var counts = new Dictionary<string, int>
+            {
+                { "1-комнатные", 0 },
+                { "2-комнатные", 0 },
+                { "3-комнатные", 0 },
+                { "4-комнатные", 0 }
+            };
+
+            foreach (DataGridViewRow row in dataGridViewTable_MMS.Rows)
+            {
+                if (row.IsNewRow) continue;
+
+                if (int.TryParse(row.Cells[2].Value?.ToString(), out int rooms))
+                {
+                    if (rooms >= 1 && rooms <= 4)
+                    {
+                        string key = $"{rooms}-комнатные";
+                        counts[key]++;
+                    }
+                }
+            }
+
+            foreach (var kvp in counts)
+            {
+                if (kvp.Value > 0)
+                    series.Points.AddXY(kvp.Key, kvp.Value);
+            }
+
+            chartTypesStat_MMS.Titles.Clear();
+        }
+
+        private void DrawBarChart()
+        {
+            panelBars_MMS.Invalidate();
+        }
+
+        private void panelBars_MMS_Paint(object sender, PaintEventArgs e)
+        {
+            var panel = panelBars_MMS;
+            var graphics = e.Graphics;
+            graphics.Clear(Color.White);
+            graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            var payments = new List<(string apt, double amount, string status)>();
+            foreach (DataGridViewRow row in dataGridViewPayStat_MMS.Rows)
+            {
+                if (row.IsNewRow) continue;
+
+                string apt = row.Cells[0].Value?.ToString() ?? "";
+                string amt = row.Cells[2].Value?.ToString() ?? "0";
+                string status = row.Cells[3].Value?.ToString() ?? "";
+
+                if (double.TryParse(amt,
+                    System.Globalization.NumberStyles.Float,
+                    System.Globalization.CultureInfo.InvariantCulture,
+                    out double amount))
+                {
+                    if (status == "Долг")
+                        amount = 0;
+
+                    payments.Add((apt, amount, status));
+                }
+            }
+
+            if (payments.Count == 0) return;
+
+            double maxAmount = payments.Where(p => p.status == "Оплачено").Max(p => p.amount);
+            if (maxAmount <= 0) maxAmount = 1;
+
+            int margin = 40;
+            int width = panel.ClientSize.Width - 2 * margin;
+            int height = panel.ClientSize.Height - 2 * margin;
+
+            int barWidth = Math.Max(6, width / payments.Count);
+            int barSpacing = Math.Max(1, (width - payments.Count * barWidth) / Math.Max(1, payments.Count));
+
+            for (int i = 0; i < payments.Count; i++)
+            {
+                double barHeight = (payments[i].amount / maxAmount) * (height - 40);
+                int x = margin + i * (barWidth + barSpacing);
+                int y = margin + height - (int)barHeight;
+                Color barColor = payments[i].status == "Оплачено"
+                    ? Color.FromArgb(100, 34, 139, 34) 
+                    : Color.FromArgb(100, 220, 20, 60); 
+
+                using (var brush = new SolidBrush(barColor))
+                {
+                    graphics.FillRectangle(brush, x, y, barWidth, (int)barHeight);
+                }
+                using (var font = new Font("Segoe UI", 8))
+                using (var brush = new SolidBrush(Color.Black))
+                {
+                    var textSize = graphics.MeasureString(payments[i].apt, font);
+                    graphics.DrawString(payments[i].apt, font, brush,
+                        x + (barWidth - textSize.Width) / 2,
+                        margin + height + 5);
+                }
+                if (payments[i].status == "Оплачено")
+                {
+                    string amountText = payments[i].amount.ToString("F0");
+                    using (var amountFont = new Font("Segoe UI", 8, FontStyle.Bold))
+                    using (var amountBrush = new SolidBrush(Color.DarkGreen))
+                    {
+                        var amountSize = graphics.MeasureString(amountText, amountFont);
+                        graphics.DrawString(amountText, amountFont, amountBrush,
+                            x + (barWidth - amountSize.Width) / 2,
+                            y - 20);
+                    }
+                }
+            }
+            using (var font = new Font("Segoe UI", 9, FontStyle.Bold))
+            using (var brush = new SolidBrush(Color.Black))
+            {
+                string yLabel = "Сумма оплаты, руб.";
+                var ySize = graphics.MeasureString(yLabel, font);
+                graphics.TranslateTransform(0, margin + height / 2 + ySize.Width / 2);
+                graphics.RotateTransform(-90);
+                graphics.DrawString(yLabel, font, brush, 0, 0);
+                graphics.ResetTransform();
+                string xLabel = "Номер квартиры";
+                var xSize = graphics.MeasureString(xLabel, font);
+                graphics.DrawString(xLabel, font, brush,
+                    panel.ClientSize.Width / 2 - xSize.Width / 2,
+                    panel.ClientSize.Height - 20);
             }
         }
     }
