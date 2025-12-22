@@ -56,6 +56,14 @@ namespace Tyuiu.MalkovaMS.Sprint7.Project.V7
                                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 UpdateStatistics();
                 UpdateCharts();
+
+                buttonSaveFile_MMS.Enabled = true;
+                buttonAddRow_MMS.Enabled = true;
+                buttonDelRow_MMS.Enabled = true;
+                buttonEditRow_MMS.Enabled = true;
+                buttonRefresh_MMS.Enabled = true;
+                buttonFilter_MMS.Enabled = true;
+                buttonClearFilter_MMS.Enabled = true;
             }
             catch (Exception ex)
             {
@@ -372,6 +380,15 @@ namespace Tyuiu.MalkovaMS.Sprint7.Project.V7
                                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 UpdateStatistics();
                 UpdateCharts();
+
+                buttonSaveFilePay_MMS.Enabled = true;
+                buttonAddRowPay_MMS.Enabled = true;
+                buttonDelRowPay_MMS.Enabled = true;
+                buttonEditRowPay_MMS.Enabled = true;
+                buttonRefreshPay_MMS.Enabled = true;
+                buttonFilterPay_MMS.Enabled = true;
+                buttonClearFilterPay_MMS.Enabled = true;
+                buttonMarkPaid_MMS.Enabled = true;
             }
             catch (Exception ex)
             {
