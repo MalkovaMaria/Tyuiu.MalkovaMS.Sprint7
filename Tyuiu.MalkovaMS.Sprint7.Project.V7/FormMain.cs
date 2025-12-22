@@ -1,3 +1,4 @@
+using System.Windows.Forms;
 using Tyuiu.MalkovaMS.Sprint7.Project.V7.Lib;
 
 namespace Tyuiu.MalkovaMS.Sprint7.Project.V7
@@ -821,8 +822,8 @@ namespace Tyuiu.MalkovaMS.Sprint7.Project.V7
                 int x = margin + i * (barWidth + barSpacing);
                 int y = margin + height - (int)barHeight;
                 Color barColor = payments[i].status == "Оплачено"
-                    ? Color.FromArgb(100, 34, 139, 34) 
-                    : Color.FromArgb(100, 220, 20, 60); 
+                    ? Color.FromArgb(100, 34, 139, 34)
+                    : Color.FromArgb(100, 220, 20, 60);
 
                 using (var brush = new SolidBrush(barColor))
                 {
@@ -863,6 +864,56 @@ namespace Tyuiu.MalkovaMS.Sprint7.Project.V7
                 graphics.DrawString(xLabel, font, brush,
                     panel.ClientSize.Width / 2 - xSize.Width / 2,
                     panel.ClientSize.Height - 20);
+            }
+        }
+
+        private void оПрограммеToolStripMenuItem_MMS_Click(object sender, EventArgs e)
+        {
+            FormAbout formAbout = new FormAbout();
+            formAbout.ShowDialog();
+        }
+
+        private void руководствоПользователяToolStripMenuItem_MMS_Click(object sender, EventArgs e)
+        {
+            FormInfo formInfo = new FormInfo();
+            formInfo.ShowDialog();
+        }
+
+        private void выходToolStripMenuItem_MMS_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Вы уверены, что хотите закрыть программу?", "Подтвердите выход", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
+            {
+                return;
+            }
+            this.Close();
+        }
+
+        private void сменитьТемуToolStripMenuItem_MMS_Click(object sender, EventArgs e)
+        {
+
+        }
+        private bool isFullScreen = false;
+        private void полноэкранныйРежимToolStripMenuItem_MMS_Click(object sender, EventArgs e)
+        {
+            if (!isFullScreen)
+            {
+                this.WindowState = FormWindowState.Normal; 
+                this.FormBorderStyle = FormBorderStyle.None;
+                this.WindowState = FormWindowState.Maximized;
+                this.TopMost = true;
+
+                isFullScreen = true;
+                полноэкранныйРежимToolStripMenuItem_MMS.Text = "Выход из полноэкранного режима";
+            }
+            else
+            {
+                this.FormBorderStyle = FormBorderStyle.Sizable;
+                this.WindowState = FormWindowState.Normal;
+                this.TopMost = false;
+
+
+                isFullScreen = false;
+                полноэкранныйРежимToolStripMenuItem_MMS.Text = "Полноэкранный режим";
             }
         }
     }

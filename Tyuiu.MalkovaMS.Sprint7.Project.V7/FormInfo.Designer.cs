@@ -63,6 +63,7 @@
             ClientSize = new Size(761, 298);
             Controls.Add(buttonOk_MMS);
             Controls.Add(labelInformation_MMS);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormInfo";

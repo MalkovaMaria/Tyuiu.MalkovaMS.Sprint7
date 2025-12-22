@@ -30,12 +30,12 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             tabControlMain_MMS = new TabControl();
             tabPageBase_MMS = new TabPage();
             panelMain_MMS = new Panel();
@@ -106,12 +106,9 @@
             labelAllKv_MMS = new Label();
             labelAllPeople_MMS = new Label();
             panelHeaderStat_MMS = new Panel();
-            buttonRefreshStat_MMS = new Button();
             labelHeaderStat_MMS = new Label();
             menuStripMain_MMS = new MenuStrip();
             файлToolStripMenuItem_MMS = new ToolStripMenuItem();
-            загрузитьДанныеToolStripMenuItem_MMS = new ToolStripMenuItem();
-            сохранитьДанныеToolStripMenuItem_MMS = new ToolStripMenuItem();
             выходToolStripMenuItem_MMS = new ToolStripMenuItem();
             справкаToolStripMenuItem_MMS = new ToolStripMenuItem();
             оПрограммеToolStripMenuItem_MMS = new ToolStripMenuItem();
@@ -124,6 +121,13 @@
             saveFileDialog_MMS = new SaveFileDialog();
             openFileDialogPay_MMS = new OpenFileDialog();
             saveFileDialogPay_MMS = new SaveFileDialog();
+            toolStripMenuItemOpenFile_MMS = new ToolStripMenuItem();
+            toolStripMenuItemSaveFile_MMS = new ToolStripMenuItem();
+            toolStripMenuItemNewFile_MMS = new ToolStripMenuItem();
+            базаДанныхToolStripMenuItem = new ToolStripMenuItem();
+            информацияОПлатежахToolStripMenuItem = new ToolStripMenuItem();
+            базаДанныхToolStripMenuItem1 = new ToolStripMenuItem();
+            информацияОПлатежахToolStripMenuItem1 = new ToolStripMenuItem();
             tabControlMain_MMS.SuspendLayout();
             tabPageBase_MMS.SuspendLayout();
             panelMain_MMS.SuspendLayout();
@@ -710,9 +714,9 @@
             tabPageStat_MMS.Controls.Add(panelRight_Stat);
             tabPageStat_MMS.Controls.Add(panelLeftStat_MMS);
             tabPageStat_MMS.Controls.Add(panelHeaderStat_MMS);
-            tabPageStat_MMS.Location = new Point(4, 29);
+            tabPageStat_MMS.Location = new Point(4, 24);
             tabPageStat_MMS.Name = "tabPageStat_MMS";
-            tabPageStat_MMS.Size = new Size(1223, 590);
+            tabPageStat_MMS.Size = new Size(1223, 595);
             tabPageStat_MMS.TabIndex = 3;
             tabPageStat_MMS.Text = "Статистика и графики";
             // 
@@ -720,7 +724,7 @@
             // 
             splitterCenterStat_MMS.Location = new Point(618, 53);
             splitterCenterStat_MMS.Name = "splitterCenterStat_MMS";
-            splitterCenterStat_MMS.Size = new Size(3, 537);
+            splitterCenterStat_MMS.Size = new Size(3, 542);
             splitterCenterStat_MMS.TabIndex = 3;
             splitterCenterStat_MMS.TabStop = false;
             // 
@@ -732,7 +736,7 @@
             panelRight_Stat.Dock = DockStyle.Fill;
             panelRight_Stat.Location = new Point(618, 53);
             panelRight_Stat.Name = "panelRight_Stat";
-            panelRight_Stat.Size = new Size(605, 537);
+            panelRight_Stat.Size = new Size(605, 542);
             panelRight_Stat.TabIndex = 2;
             // 
             // groupBoxTypesOfAppatments_MMS
@@ -741,27 +745,27 @@
             groupBoxTypesOfAppatments_MMS.Dock = DockStyle.Fill;
             groupBoxTypesOfAppatments_MMS.Location = new Point(0, 262);
             groupBoxTypesOfAppatments_MMS.Name = "groupBoxTypesOfAppatments_MMS";
-            groupBoxTypesOfAppatments_MMS.Size = new Size(605, 275);
+            groupBoxTypesOfAppatments_MMS.Size = new Size(605, 280);
             groupBoxTypesOfAppatments_MMS.TabIndex = 3;
             groupBoxTypesOfAppatments_MMS.TabStop = false;
             groupBoxTypesOfAppatments_MMS.Text = "Распределение по типам квартир";
             // 
             // chartTypesStat_MMS
             // 
-            chartArea1.Name = "ChartArea1";
-            chartTypesStat_MMS.ChartAreas.Add(chartArea1);
+            chartArea3.Name = "ChartArea1";
+            chartTypesStat_MMS.ChartAreas.Add(chartArea3);
             chartTypesStat_MMS.Dock = DockStyle.Fill;
-            legend1.Name = "Legend1";
-            chartTypesStat_MMS.Legends.Add(legend1);
+            legend3.Name = "Legend1";
+            chartTypesStat_MMS.Legends.Add(legend3);
             chartTypesStat_MMS.Location = new Point(3, 23);
             chartTypesStat_MMS.Name = "chartTypesStat_MMS";
             chartTypesStat_MMS.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            chartTypesStat_MMS.Series.Add(series1);
-            chartTypesStat_MMS.Size = new Size(599, 249);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            chartTypesStat_MMS.Series.Add(series3);
+            chartTypesStat_MMS.Size = new Size(599, 254);
             chartTypesStat_MMS.TabIndex = 1;
             chartTypesStat_MMS.Text = "chart2";
             // 
@@ -778,20 +782,20 @@
             // 
             // chartKidsStat_MMS
             // 
-            chartArea2.Name = "ChartArea1";
-            chartKidsStat_MMS.ChartAreas.Add(chartArea2);
+            chartArea4.Name = "ChartArea1";
+            chartKidsStat_MMS.ChartAreas.Add(chartArea4);
             chartKidsStat_MMS.Dock = DockStyle.Fill;
-            legend2.Name = "Legend1";
-            chartKidsStat_MMS.Legends.Add(legend2);
+            legend4.Name = "Legend1";
+            chartKidsStat_MMS.Legends.Add(legend4);
             chartKidsStat_MMS.Location = new Point(3, 23);
             chartKidsStat_MMS.Name = "chartKidsStat_MMS";
             chartKidsStat_MMS.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Font = new Font("Segoe UI Semibold", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            chartKidsStat_MMS.Series.Add(series2);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series4.Font = new Font("Segoe UI Semibold", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            chartKidsStat_MMS.Series.Add(series4);
             chartKidsStat_MMS.Size = new Size(599, 236);
             chartKidsStat_MMS.TabIndex = 0;
             chartKidsStat_MMS.Text = "chart1";
@@ -804,7 +808,7 @@
             panelLeftStat_MMS.Dock = DockStyle.Left;
             panelLeftStat_MMS.Location = new Point(0, 53);
             panelLeftStat_MMS.Name = "panelLeftStat_MMS";
-            panelLeftStat_MMS.Size = new Size(618, 537);
+            panelLeftStat_MMS.Size = new Size(618, 542);
             panelLeftStat_MMS.TabIndex = 1;
             // 
             // groupBoxPayStat_MMS
@@ -813,7 +817,7 @@
             groupBoxPayStat_MMS.Dock = DockStyle.Fill;
             groupBoxPayStat_MMS.Location = new Point(0, 262);
             groupBoxPayStat_MMS.Name = "groupBoxPayStat_MMS";
-            groupBoxPayStat_MMS.Size = new Size(618, 275);
+            groupBoxPayStat_MMS.Size = new Size(618, 280);
             groupBoxPayStat_MMS.TabIndex = 2;
             groupBoxPayStat_MMS.TabStop = false;
             groupBoxPayStat_MMS.Text = "Платежи за ноябрь 2025";
@@ -823,7 +827,7 @@
             panelBars_MMS.Dock = DockStyle.Fill;
             panelBars_MMS.Location = new Point(3, 23);
             panelBars_MMS.Name = "panelBars_MMS";
-            panelBars_MMS.Size = new Size(612, 249);
+            panelBars_MMS.Size = new Size(612, 254);
             panelBars_MMS.TabIndex = 0;
             panelBars_MMS.Paint += panelBars_MMS_Paint;
             // 
@@ -891,7 +895,6 @@
             // 
             panelHeaderStat_MMS.BackColor = SystemColors.MenuBar;
             panelHeaderStat_MMS.BorderStyle = BorderStyle.FixedSingle;
-            panelHeaderStat_MMS.Controls.Add(buttonRefreshStat_MMS);
             panelHeaderStat_MMS.Controls.Add(labelHeaderStat_MMS);
             panelHeaderStat_MMS.Dock = DockStyle.Top;
             panelHeaderStat_MMS.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -899,18 +902,6 @@
             panelHeaderStat_MMS.Name = "panelHeaderStat_MMS";
             panelHeaderStat_MMS.Size = new Size(1223, 53);
             panelHeaderStat_MMS.TabIndex = 0;
-            // 
-            // buttonRefreshStat_MMS
-            // 
-            buttonRefreshStat_MMS.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            buttonRefreshStat_MMS.BackColor = Color.WhiteSmoke;
-            buttonRefreshStat_MMS.ForeColor = SystemColors.ButtonFace;
-            buttonRefreshStat_MMS.Image = (Image)resources.GetObject("buttonRefreshStat_MMS.Image");
-            buttonRefreshStat_MMS.Location = new Point(1167, 2);
-            buttonRefreshStat_MMS.Name = "buttonRefreshStat_MMS";
-            buttonRefreshStat_MMS.Size = new Size(47, 47);
-            buttonRefreshStat_MMS.TabIndex = 1;
-            buttonRefreshStat_MMS.UseVisualStyleBackColor = false;
             // 
             // labelHeaderStat_MMS
             // 
@@ -936,28 +927,17 @@
             // 
             // файлToolStripMenuItem_MMS
             // 
-            файлToolStripMenuItem_MMS.DropDownItems.AddRange(new ToolStripItem[] { загрузитьДанныеToolStripMenuItem_MMS, сохранитьДанныеToolStripMenuItem_MMS, выходToolStripMenuItem_MMS });
+            файлToolStripMenuItem_MMS.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuItemNewFile_MMS, toolStripMenuItemOpenFile_MMS, toolStripMenuItemSaveFile_MMS, выходToolStripMenuItem_MMS });
             файлToolStripMenuItem_MMS.Name = "файлToolStripMenuItem_MMS";
             файлToolStripMenuItem_MMS.Size = new Size(48, 20);
             файлToolStripMenuItem_MMS.Text = "Файл";
             // 
-            // загрузитьДанныеToolStripMenuItem_MMS
-            // 
-            загрузитьДанныеToolStripMenuItem_MMS.Name = "загрузитьДанныеToolStripMenuItem_MMS";
-            загрузитьДанныеToolStripMenuItem_MMS.Size = new Size(177, 22);
-            загрузитьДанныеToolStripMenuItem_MMS.Text = "Загрузить данные";
-            // 
-            // сохранитьДанныеToolStripMenuItem_MMS
-            // 
-            сохранитьДанныеToolStripMenuItem_MMS.Name = "сохранитьДанныеToolStripMenuItem_MMS";
-            сохранитьДанныеToolStripMenuItem_MMS.Size = new Size(177, 22);
-            сохранитьДанныеToolStripMenuItem_MMS.Text = "Сохранить данные";
-            // 
             // выходToolStripMenuItem_MMS
             // 
             выходToolStripMenuItem_MMS.Name = "выходToolStripMenuItem_MMS";
-            выходToolStripMenuItem_MMS.Size = new Size(177, 22);
+            выходToolStripMenuItem_MMS.Size = new Size(180, 22);
             выходToolStripMenuItem_MMS.Text = "Выход";
+            выходToolStripMenuItem_MMS.Click += выходToolStripMenuItem_MMS_Click;
             // 
             // справкаToolStripMenuItem_MMS
             // 
@@ -971,12 +951,14 @@
             оПрограммеToolStripMenuItem_MMS.Name = "оПрограммеToolStripMenuItem_MMS";
             оПрограммеToolStripMenuItem_MMS.Size = new Size(221, 22);
             оПрограммеToolStripMenuItem_MMS.Text = "О программе";
+            оПрограммеToolStripMenuItem_MMS.Click += оПрограммеToolStripMenuItem_MMS_Click;
             // 
             // руководствоПользователяToolStripMenuItem_MMS
             // 
             руководствоПользователяToolStripMenuItem_MMS.Name = "руководствоПользователяToolStripMenuItem_MMS";
             руководствоПользователяToolStripMenuItem_MMS.Size = new Size(221, 22);
             руководствоПользователяToolStripMenuItem_MMS.Text = "Руководство пользователя";
+            руководствоПользователяToolStripMenuItem_MMS.Click += руководствоПользователяToolStripMenuItem_MMS_Click;
             // 
             // видToolStripMenuItem_MMS
             // 
@@ -990,12 +972,14 @@
             сменитьТемуToolStripMenuItem_MMS.Name = "сменитьТемуToolStripMenuItem_MMS";
             сменитьТемуToolStripMenuItem_MMS.Size = new Size(207, 22);
             сменитьТемуToolStripMenuItem_MMS.Text = "Сменить тему";
+            сменитьТемуToolStripMenuItem_MMS.Click += сменитьТемуToolStripMenuItem_MMS_Click;
             // 
             // полноэкранныйРежимToolStripMenuItem_MMS
             // 
             полноэкранныйРежимToolStripMenuItem_MMS.Name = "полноэкранныйРежимToolStripMenuItem_MMS";
             полноэкранныйРежимToolStripMenuItem_MMS.Size = new Size(207, 22);
             полноэкранныйРежимToolStripMenuItem_MMS.Text = "Полноэкранный режим";
+            полноэкранныйРежимToolStripMenuItem_MMS.Click += полноэкранныйРежимToolStripMenuItem_MMS_Click;
             // 
             // openFileDialog_MMS
             // 
@@ -1004,6 +988,54 @@
             // openFileDialogPay_MMS
             // 
             openFileDialogPay_MMS.FileName = "openFileDialog1";
+            // 
+            // toolStripMenuItemOpenFile_MMS
+            // 
+            toolStripMenuItemOpenFile_MMS.DropDownItems.AddRange(new ToolStripItem[] { базаДанныхToolStripMenuItem, информацияОПлатежахToolStripMenuItem });
+            toolStripMenuItemOpenFile_MMS.Name = "toolStripMenuItemOpenFile_MMS";
+            toolStripMenuItemOpenFile_MMS.Size = new Size(180, 22);
+            toolStripMenuItemOpenFile_MMS.Text = "Открыть файл";
+            // 
+            // toolStripMenuItemSaveFile_MMS
+            // 
+            toolStripMenuItemSaveFile_MMS.DropDownItems.AddRange(new ToolStripItem[] { базаДанныхToolStripMenuItem1, информацияОПлатежахToolStripMenuItem1 });
+            toolStripMenuItemSaveFile_MMS.Name = "toolStripMenuItemSaveFile_MMS";
+            toolStripMenuItemSaveFile_MMS.Size = new Size(180, 22);
+            toolStripMenuItemSaveFile_MMS.Text = "Сохранить файл";
+            // 
+            // toolStripMenuItemNewFile_MMS
+            // 
+            toolStripMenuItemNewFile_MMS.Name = "toolStripMenuItemNewFile_MMS";
+            toolStripMenuItemNewFile_MMS.Size = new Size(180, 22);
+            toolStripMenuItemNewFile_MMS.Text = "Создать файл";
+            // 
+            // базаДанныхToolStripMenuItem
+            // 
+            базаДанныхToolStripMenuItem.Name = "базаДанныхToolStripMenuItem";
+            базаДанныхToolStripMenuItem.Size = new Size(213, 22);
+            базаДанныхToolStripMenuItem.Text = "База данных";
+            базаДанныхToolStripMenuItem.Click += buttonAddFile_MMS_Click;
+            // 
+            // информацияОПлатежахToolStripMenuItem
+            // 
+            информацияОПлатежахToolStripMenuItem.Name = "информацияОПлатежахToolStripMenuItem";
+            информацияОПлатежахToolStripMenuItem.Size = new Size(213, 22);
+            информацияОПлатежахToolStripMenuItem.Text = "Информация о платежах";
+            информацияОПлатежахToolStripMenuItem.Click += buttonAddFilePay_MMS_Click;
+            // 
+            // базаДанныхToolStripMenuItem1
+            // 
+            базаДанныхToolStripMenuItem1.Name = "базаДанныхToolStripMenuItem1";
+            базаДанныхToolStripMenuItem1.Size = new Size(213, 22);
+            базаДанныхToolStripMenuItem1.Text = "База данных";
+            базаДанныхToolStripMenuItem1.Click += buttonSaveFile_MMS_Click;
+            // 
+            // информацияОПлатежахToolStripMenuItem1
+            // 
+            информацияОПлатежахToolStripMenuItem1.Name = "информацияОПлатежахToolStripMenuItem1";
+            информацияОПлатежахToolStripMenuItem1.Size = new Size(213, 22);
+            информацияОПлатежахToolStripMenuItem1.Text = "Информация о платежах";
+            информацияОПлатежахToolStripMenuItem1.Click += buttonSaveFilePay_MMS_Click;
             // 
             // FormMain
             // 
@@ -1065,8 +1097,6 @@
         private TabPage tabPageStat_MMS;
         private MenuStrip menuStripMain_MMS;
         private ToolStripMenuItem файлToolStripMenuItem_MMS;
-        private ToolStripMenuItem загрузитьДанныеToolStripMenuItem_MMS;
-        private ToolStripMenuItem сохранитьДанныеToolStripMenuItem_MMS;
         private ToolStripMenuItem выходToolStripMenuItem_MMS;
         private ToolStripMenuItem справкаToolStripMenuItem_MMS;
         private ToolStripMenuItem оПрограммеToolStripMenuItem_MMS;
@@ -1104,7 +1134,6 @@
         private ToolStripMenuItem полноэкранныйРежимToolStripMenuItem_MMS;
         private Panel panelHeaderStat_MMS;
         private Label labelHeaderStat_MMS;
-        private Button buttonRefreshStat_MMS;
         private Panel panelRight_Stat;
         private Panel panelLeftStat_MMS;
         private GroupBox groupBoxFamilyStat_MMS;
@@ -1155,5 +1184,12 @@
         private Label labelStatusPay_MMS;
         private Button buttonMarkPaid_MMS;
         private Panel panelBars_MMS;
+        private ToolStripMenuItem toolStripMenuItemNewFile_MMS;
+        private ToolStripMenuItem toolStripMenuItemOpenFile_MMS;
+        private ToolStripMenuItem базаДанныхToolStripMenuItem;
+        private ToolStripMenuItem информацияОПлатежахToolStripMenuItem;
+        private ToolStripMenuItem toolStripMenuItemSaveFile_MMS;
+        private ToolStripMenuItem базаДанныхToolStripMenuItem1;
+        private ToolStripMenuItem информацияОПлатежахToolStripMenuItem1;
     }
 }

@@ -49,7 +49,7 @@
             // 
             pictureBoxPhoto_MMS.Image = (Image)resources.GetObject("pictureBoxPhoto_MMS.Image");
             pictureBoxPhoto_MMS.Location = new Point(8, 7);
-            pictureBoxPhoto_MMS.Margin = new Padding(2, 2, 2, 2);
+            pictureBoxPhoto_MMS.Margin = new Padding(2);
             pictureBoxPhoto_MMS.Name = "pictureBoxPhoto_MMS";
             pictureBoxPhoto_MMS.Size = new Size(142, 182);
             pictureBoxPhoto_MMS.SizeMode = PictureBoxSizeMode.Zoom;
@@ -61,7 +61,7 @@
             buttonOk_MMS.BackgroundImageLayout = ImageLayout.Stretch;
             buttonOk_MMS.FlatStyle = FlatStyle.System;
             buttonOk_MMS.Location = new Point(384, 167);
-            buttonOk_MMS.Margin = new Padding(2, 2, 2, 2);
+            buttonOk_MMS.Margin = new Padding(2);
             buttonOk_MMS.Name = "buttonOk_MMS";
             buttonOk_MMS.Size = new Size(97, 22);
             buttonOk_MMS.TabIndex = 2;
@@ -77,7 +77,8 @@
             Controls.Add(buttonOk_MMS);
             Controls.Add(pictureBoxPhoto_MMS);
             Controls.Add(labelAbout_MMS);
-            Margin = new Padding(2, 2, 2, 2);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            Margin = new Padding(2);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormAbout";

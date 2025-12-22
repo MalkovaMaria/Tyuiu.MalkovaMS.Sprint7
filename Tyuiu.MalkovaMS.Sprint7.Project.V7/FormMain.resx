@@ -141,6 +141,30 @@
   <metadata name="ColumnPay_MMS.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="ColumnAppartment_MMS.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ColumnPloshad_MMS.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ColumnRooms_MMS.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ColumnFamilia_MMS.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ColumnDate_MMS.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ColumnPeople_MMS.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ColumnKids_MMS.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ColumnPay_MMS.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="buttonAddFile_MMS.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -295,6 +319,18 @@
         x6iZ8I/J/eRicjX5xG3m42T8/HtII2VCy3K7qZnHz///AMb8A0EZV0vl79WyAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="ColumnNumberPay_MMS.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ColumnPeriod_MMS.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ColumnSumPay_MMS.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ColumnStatPay_MMS.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="ColumnNumberPay_MMS.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -492,37 +528,6 @@
         vZlenXBXexrDNuqemnoNyxtCNs6VV29h1q/i2VDZ1BW7SkRlkzM2HTPlpSVNJ+0Q34QVDUEyhIrGKe4l
         Kw+HceBIt40ap5xXT/YWZv09MBv2NyefUar5pL8H7sA/JokGHiz0X9ENudOGnE49Ny2d4nzz6i2NjOz9
         x6iZ8I/J/eRicjX5xG3m42T8/HtII2VCy3K7qZnHz///AMb8A0EZV0vl79WyAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="buttonRefreshStat_MMS.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
 </value>
   </data>
   <metadata name="menuStripMain_MMS.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
