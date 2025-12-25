@@ -7,7 +7,7 @@ namespace Tyuiu.MalkovaMS.Sprint7.Project.V7.Test
         [TestMethod]
         public void FileExist()
         {
-            string path = @"C:\Users\marim\source\repos\Tyuiu.MalkovaMS.Sprint7\Tyuiu.MalkovaMS.Sprint7.Project.V7\dom2.csv";
+            string path = @"C:\Users\marim\source\repos\Tyuiu.MalkovaMS.Sprint7\Tyuiu.MalkovaMS.Sprint7.Project.V7\domInfo.csv";
             FileInfo fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;
             bool wait = true;

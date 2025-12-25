@@ -120,7 +120,6 @@
             оПрограммеToolStripMenuItem_MMS = new ToolStripMenuItem();
             руководствоПользователяToolStripMenuItem_MMS = new ToolStripMenuItem();
             видToolStripMenuItem_MMS = new ToolStripMenuItem();
-            сменитьТемуToolStripMenuItem_MMS = new ToolStripMenuItem();
             полноэкранныйРежимToolStripMenuItem_MMS = new ToolStripMenuItem();
             toolTipWork_MMS = new ToolTip(components);
             openFileDialog_MMS = new OpenFileDialog();
@@ -162,11 +161,11 @@
             tabControlMain_MMS.Controls.Add(tabPagePayInfo_MMS);
             tabControlMain_MMS.Controls.Add(tabPageStat_MMS);
             tabControlMain_MMS.Dock = DockStyle.Fill;
-            tabControlMain_MMS.Location = new Point(0, 24);
+            tabControlMain_MMS.Location = new Point(0, 33);
             tabControlMain_MMS.Margin = new Padding(4);
             tabControlMain_MMS.Name = "tabControlMain_MMS";
             tabControlMain_MMS.SelectedIndex = 0;
-            tabControlMain_MMS.Size = new Size(1231, 623);
+            tabControlMain_MMS.Size = new Size(1455, 614);
             tabControlMain_MMS.TabIndex = 0;
             // 
             // tabPageBase_MMS
@@ -174,12 +173,12 @@
             tabPageBase_MMS.BackColor = SystemColors.ControlLightLight;
             tabPageBase_MMS.Controls.Add(panelMain_MMS);
             tabPageBase_MMS.Controls.Add(panelTools_MMS);
-            tabPageBase_MMS.Font = new Font("Adobe Fan Heiti Std B", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            tabPageBase_MMS.Location = new Point(4, 29);
+            tabPageBase_MMS.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            tabPageBase_MMS.Location = new Point(4, 40);
             tabPageBase_MMS.Margin = new Padding(4);
             tabPageBase_MMS.Name = "tabPageBase_MMS";
             tabPageBase_MMS.Padding = new Padding(4);
-            tabPageBase_MMS.Size = new Size(1223, 590);
+            tabPageBase_MMS.Size = new Size(1447, 570);
             tabPageBase_MMS.TabIndex = 0;
             tabPageBase_MMS.Text = "База данных";
             // 
@@ -188,9 +187,9 @@
             panelMain_MMS.Controls.Add(dataGridViewTable_MMS);
             panelMain_MMS.Dock = DockStyle.Fill;
             panelMain_MMS.Font = new Font("Arial Narrow", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            panelMain_MMS.Location = new Point(4, 110);
+            panelMain_MMS.Location = new Point(4, 128);
             panelMain_MMS.Name = "panelMain_MMS";
-            panelMain_MMS.Size = new Size(1215, 476);
+            panelMain_MMS.Size = new Size(1439, 438);
             panelMain_MMS.TabIndex = 1;
             // 
             // dataGridViewTable_MMS
@@ -205,13 +204,15 @@
             dataGridViewTable_MMS.Name = "dataGridViewTable_MMS";
             dataGridViewTable_MMS.ReadOnly = true;
             dataGridViewTable_MMS.RowHeadersVisible = false;
-            dataGridViewTable_MMS.Size = new Size(1215, 476);
+            dataGridViewTable_MMS.RowHeadersWidth = 62;
+            dataGridViewTable_MMS.Size = new Size(1439, 438);
             dataGridViewTable_MMS.TabIndex = 0;
             // 
             // ColumnAppartment_MMS
             // 
             ColumnAppartment_MMS.FillWeight = 66.0066147F;
             ColumnAppartment_MMS.HeaderText = "Квартира";
+            ColumnAppartment_MMS.MinimumWidth = 8;
             ColumnAppartment_MMS.Name = "ColumnAppartment_MMS";
             ColumnAppartment_MMS.ReadOnly = true;
             // 
@@ -219,6 +220,7 @@
             // 
             ColumnPloshad_MMS.FillWeight = 77.42056F;
             ColumnPloshad_MMS.HeaderText = "Общая площадь";
+            ColumnPloshad_MMS.MinimumWidth = 8;
             ColumnPloshad_MMS.Name = "ColumnPloshad_MMS";
             ColumnPloshad_MMS.ReadOnly = true;
             // 
@@ -226,6 +228,7 @@
             // 
             ColumnRooms_MMS.FillWeight = 87.89277F;
             ColumnRooms_MMS.HeaderText = "Количество комнат";
+            ColumnRooms_MMS.MinimumWidth = 8;
             ColumnRooms_MMS.Name = "ColumnRooms_MMS";
             ColumnRooms_MMS.ReadOnly = true;
             // 
@@ -233,6 +236,7 @@
             // 
             ColumnFamilia_MMS.FillWeight = 97.50092F;
             ColumnFamilia_MMS.HeaderText = "Фамилия";
+            ColumnFamilia_MMS.MinimumWidth = 8;
             ColumnFamilia_MMS.Name = "ColumnFamilia_MMS";
             ColumnFamilia_MMS.ReadOnly = true;
             // 
@@ -240,6 +244,7 @@
             // 
             ColumnDate_MMS.FillWeight = 106.316338F;
             ColumnDate_MMS.HeaderText = "Дата прописки";
+            ColumnDate_MMS.MinimumWidth = 8;
             ColumnDate_MMS.Name = "ColumnDate_MMS";
             ColumnDate_MMS.ReadOnly = true;
             // 
@@ -247,6 +252,7 @@
             // 
             ColumnPeople_MMS.FillWeight = 114.40435F;
             ColumnPeople_MMS.HeaderText = "Количество членов семьи";
+            ColumnPeople_MMS.MinimumWidth = 8;
             ColumnPeople_MMS.Name = "ColumnPeople_MMS";
             ColumnPeople_MMS.ReadOnly = true;
             // 
@@ -254,6 +260,7 @@
             // 
             ColumnKids_MMS.FillWeight = 121.8251F;
             ColumnKids_MMS.HeaderText = "Количество детей";
+            ColumnKids_MMS.MinimumWidth = 8;
             ColumnKids_MMS.Name = "ColumnKids_MMS";
             ColumnKids_MMS.ReadOnly = true;
             // 
@@ -261,6 +268,7 @@
             // 
             ColumnPay_MMS.FillWeight = 128.63353F;
             ColumnPay_MMS.HeaderText = "Наличие долга";
+            ColumnPay_MMS.MinimumWidth = 8;
             ColumnPay_MMS.Name = "ColumnPay_MMS";
             ColumnPay_MMS.ReadOnly = true;
             // 
@@ -272,10 +280,10 @@
             panelTools_MMS.Controls.Add(groupBoxFile_MMS);
             panelTools_MMS.Controls.Add(groupBoxChange_MMS);
             panelTools_MMS.Dock = DockStyle.Top;
-            panelTools_MMS.Font = new Font("Adobe Garamond Pro Bold", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            panelTools_MMS.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             panelTools_MMS.Location = new Point(4, 4);
             panelTools_MMS.Name = "panelTools_MMS";
-            panelTools_MMS.Size = new Size(1215, 106);
+            panelTools_MMS.Size = new Size(1439, 124);
             panelTools_MMS.TabIndex = 0;
             // 
             // groupBoxFilter_MMS
@@ -286,9 +294,10 @@
             groupBoxFilter_MMS.Controls.Add(textBoxFilterKey_MMS);
             groupBoxFilter_MMS.Controls.Add(labelFilterKey_MMS);
             groupBoxFilter_MMS.Controls.Add(labelFilterCol_MMS);
-            groupBoxFilter_MMS.Location = new Point(693, 3);
+            groupBoxFilter_MMS.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Bold);
+            groupBoxFilter_MMS.Location = new Point(743, 3);
             groupBoxFilter_MMS.Name = "groupBoxFilter_MMS";
-            groupBoxFilter_MMS.Size = new Size(522, 94);
+            groupBoxFilter_MMS.Size = new Size(692, 115);
             groupBoxFilter_MMS.TabIndex = 3;
             groupBoxFilter_MMS.TabStop = false;
             groupBoxFilter_MMS.Text = "Фильтрация";
@@ -297,9 +306,10 @@
             // 
             buttonClearFilter_MMS.BackColor = SystemColors.ButtonHighlight;
             buttonClearFilter_MMS.Enabled = false;
-            buttonClearFilter_MMS.Location = new Point(346, 52);
+            buttonClearFilter_MMS.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
+            buttonClearFilter_MMS.Location = new Point(424, 64);
             buttonClearFilter_MMS.Name = "buttonClearFilter_MMS";
-            buttonClearFilter_MMS.Size = new Size(158, 28);
+            buttonClearFilter_MMS.Size = new Size(246, 36);
             buttonClearFilter_MMS.TabIndex = 6;
             buttonClearFilter_MMS.Text = "Сброс фильтра";
             toolTipWork_MMS.SetToolTip(buttonClearFilter_MMS, "Отменить настройки фильтра");
@@ -308,11 +318,11 @@
             // 
             // comboBoxColumn_MMS
             // 
-            comboBoxColumn_MMS.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            comboBoxColumn_MMS.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 204);
             comboBoxColumn_MMS.FormattingEnabled = true;
-            comboBoxColumn_MMS.Location = new Point(6, 46);
+            comboBoxColumn_MMS.Location = new Point(6, 64);
             comboBoxColumn_MMS.Name = "comboBoxColumn_MMS";
-            comboBoxColumn_MMS.Size = new Size(144, 28);
+            comboBoxColumn_MMS.Size = new Size(195, 36);
             comboBoxColumn_MMS.TabIndex = 5;
             comboBoxColumn_MMS.SelectedIndexChanged += comboBoxColumn_MMS_SelectedIndexChanged;
             // 
@@ -320,9 +330,10 @@
             // 
             buttonFilter_MMS.BackColor = SystemColors.ButtonHighlight;
             buttonFilter_MMS.Enabled = false;
-            buttonFilter_MMS.Location = new Point(346, 18);
+            buttonFilter_MMS.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
+            buttonFilter_MMS.Location = new Point(424, 23);
             buttonFilter_MMS.Name = "buttonFilter_MMS";
-            buttonFilter_MMS.Size = new Size(158, 28);
+            buttonFilter_MMS.Size = new Size(246, 36);
             buttonFilter_MMS.TabIndex = 4;
             buttonFilter_MMS.Text = "Отфильтровать";
             toolTipWork_MMS.SetToolTip(buttonFilter_MMS, "Фильтрация по указанному стобцу");
@@ -331,29 +342,29 @@
             // 
             // textBoxFilterKey_MMS
             // 
-            textBoxFilterKey_MMS.Location = new Point(183, 44);
+            textBoxFilterKey_MMS.Location = new Point(221, 68);
             textBoxFilterKey_MMS.Name = "textBoxFilterKey_MMS";
-            textBoxFilterKey_MMS.Size = new Size(144, 27);
+            textBoxFilterKey_MMS.Size = new Size(188, 32);
             textBoxFilterKey_MMS.TabIndex = 3;
             textBoxFilterKey_MMS.TextChanged += textBoxFindKey_MMS_TextChanged;
             // 
             // labelFilterKey_MMS
             // 
             labelFilterKey_MMS.AutoSize = true;
-            labelFilterKey_MMS.Font = new Font("Adobe Garamond Pro", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelFilterKey_MMS.Location = new Point(183, 22);
+            labelFilterKey_MMS.Font = new Font("Microsoft Sans Serif", 10F);
+            labelFilterKey_MMS.Location = new Point(220, 32);
             labelFilterKey_MMS.Name = "labelFilterKey_MMS";
-            labelFilterKey_MMS.Size = new Size(146, 20);
+            labelFilterKey_MMS.Size = new Size(198, 25);
             labelFilterKey_MMS.TabIndex = 2;
             labelFilterKey_MMS.Text = "Ключ для фильтра:";
             // 
             // labelFilterCol_MMS
             // 
             labelFilterCol_MMS.AutoSize = true;
-            labelFilterCol_MMS.Font = new Font("Adobe Garamond Pro", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelFilterCol_MMS.Location = new Point(6, 23);
+            labelFilterCol_MMS.Font = new Font("Microsoft Sans Serif", 10F);
+            labelFilterCol_MMS.Location = new Point(6, 32);
             labelFilterCol_MMS.Name = "labelFilterCol_MMS";
-            labelFilterCol_MMS.Size = new Size(144, 20);
+            labelFilterCol_MMS.Size = new Size(195, 25);
             labelFilterCol_MMS.TabIndex = 0;
             labelFilterCol_MMS.Text = "Выберите столбец:";
             // 
@@ -361,28 +372,29 @@
             // 
             groupBoxFind_MMS.Controls.Add(textBoxFindKey_MMS);
             groupBoxFind_MMS.Controls.Add(labelFindKey_MMS);
-            groupBoxFind_MMS.Location = new Point(501, 3);
+            groupBoxFind_MMS.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Bold);
+            groupBoxFind_MMS.Location = new Point(538, 3);
             groupBoxFind_MMS.Name = "groupBoxFind_MMS";
-            groupBoxFind_MMS.Size = new Size(174, 94);
+            groupBoxFind_MMS.Size = new Size(199, 115);
             groupBoxFind_MMS.TabIndex = 2;
             groupBoxFind_MMS.TabStop = false;
             groupBoxFind_MMS.Text = "Поиск";
             // 
             // textBoxFindKey_MMS
             // 
-            textBoxFindKey_MMS.Location = new Point(6, 46);
+            textBoxFindKey_MMS.Location = new Point(6, 68);
             textBoxFindKey_MMS.Name = "textBoxFindKey_MMS";
-            textBoxFindKey_MMS.Size = new Size(158, 27);
+            textBoxFindKey_MMS.Size = new Size(187, 32);
             textBoxFindKey_MMS.TabIndex = 1;
             textBoxFindKey_MMS.TextChanged += textBoxFindKey_MMS_TextChanged;
             // 
             // labelFindKey_MMS
             // 
             labelFindKey_MMS.AutoSize = true;
-            labelFindKey_MMS.Font = new Font("Adobe Garamond Pro", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelFindKey_MMS.Location = new Point(6, 23);
+            labelFindKey_MMS.Font = new Font("Microsoft Sans Serif", 10F);
+            labelFindKey_MMS.Location = new Point(6, 32);
             labelFindKey_MMS.Name = "labelFindKey_MMS";
-            labelFindKey_MMS.Size = new Size(134, 20);
+            labelFindKey_MMS.Size = new Size(176, 25);
             labelFindKey_MMS.TabIndex = 0;
             labelFindKey_MMS.Text = "Ключ для поиска:";
             // 
@@ -390,10 +402,10 @@
             // 
             groupBoxFile_MMS.Controls.Add(buttonAddFile_MMS);
             groupBoxFile_MMS.Controls.Add(buttonSaveFile_MMS);
-            groupBoxFile_MMS.Font = new Font("Adobe Garamond Pro Bold", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            groupBoxFile_MMS.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Bold);
             groupBoxFile_MMS.Location = new Point(3, 3);
             groupBoxFile_MMS.Name = "groupBoxFile_MMS";
-            groupBoxFile_MMS.Size = new Size(150, 94);
+            groupBoxFile_MMS.Size = new Size(172, 115);
             groupBoxFile_MMS.TabIndex = 1;
             groupBoxFile_MMS.TabStop = false;
             groupBoxFile_MMS.Text = "Файл";
@@ -401,10 +413,11 @@
             // buttonAddFile_MMS
             // 
             buttonAddFile_MMS.BackColor = SystemColors.ButtonHighlight;
+            buttonAddFile_MMS.BackgroundImageLayout = ImageLayout.Stretch;
             buttonAddFile_MMS.Image = (Image)resources.GetObject("buttonAddFile_MMS.Image");
-            buttonAddFile_MMS.Location = new Point(6, 26);
+            buttonAddFile_MMS.Location = new Point(6, 32);
             buttonAddFile_MMS.Name = "buttonAddFile_MMS";
-            buttonAddFile_MMS.Size = new Size(58, 58);
+            buttonAddFile_MMS.Size = new Size(68, 68);
             buttonAddFile_MMS.TabIndex = 1;
             toolTipWork_MMS.SetToolTip(buttonAddFile_MMS, "Отрыть файл формата .csv");
             buttonAddFile_MMS.UseVisualStyleBackColor = false;
@@ -415,9 +428,9 @@
             buttonSaveFile_MMS.BackColor = SystemColors.ButtonHighlight;
             buttonSaveFile_MMS.Enabled = false;
             buttonSaveFile_MMS.Image = (Image)resources.GetObject("buttonSaveFile_MMS.Image");
-            buttonSaveFile_MMS.Location = new Point(81, 26);
+            buttonSaveFile_MMS.Location = new Point(89, 32);
             buttonSaveFile_MMS.Name = "buttonSaveFile_MMS";
-            buttonSaveFile_MMS.Size = new Size(58, 58);
+            buttonSaveFile_MMS.Size = new Size(68, 68);
             buttonSaveFile_MMS.TabIndex = 0;
             toolTipWork_MMS.SetToolTip(buttonSaveFile_MMS, "Сохранить файл в формате .csv");
             buttonSaveFile_MMS.UseVisualStyleBackColor = false;
@@ -429,10 +442,10 @@
             groupBoxChange_MMS.Controls.Add(buttonEditRow_MMS);
             groupBoxChange_MMS.Controls.Add(buttonDelRow_MMS);
             groupBoxChange_MMS.Controls.Add(buttonAddRow_MMS);
-            groupBoxChange_MMS.Font = new Font("Adobe Garamond Pro Bold", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBoxChange_MMS.Location = new Point(171, 3);
+            groupBoxChange_MMS.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Bold);
+            groupBoxChange_MMS.Location = new Point(181, 3);
             groupBoxChange_MMS.Name = "groupBoxChange_MMS";
-            groupBoxChange_MMS.Size = new Size(312, 94);
+            groupBoxChange_MMS.Size = new Size(351, 115);
             groupBoxChange_MMS.TabIndex = 0;
             groupBoxChange_MMS.TabStop = false;
             groupBoxChange_MMS.Text = "Изменение данных";
@@ -442,9 +455,9 @@
             buttonRefresh_MMS.BackColor = SystemColors.ButtonHighlight;
             buttonRefresh_MMS.Enabled = false;
             buttonRefresh_MMS.Image = (Image)resources.GetObject("buttonRefresh_MMS.Image");
-            buttonRefresh_MMS.Location = new Point(236, 26);
+            buttonRefresh_MMS.Location = new Point(265, 32);
             buttonRefresh_MMS.Name = "buttonRefresh_MMS";
-            buttonRefresh_MMS.Size = new Size(58, 58);
+            buttonRefresh_MMS.Size = new Size(68, 68);
             buttonRefresh_MMS.TabIndex = 1;
             toolTipWork_MMS.SetToolTip(buttonRefresh_MMS, "Обновить данные из файла");
             buttonRefresh_MMS.UseVisualStyleBackColor = false;
@@ -455,9 +468,9 @@
             buttonEditRow_MMS.BackColor = SystemColors.ButtonHighlight;
             buttonEditRow_MMS.Enabled = false;
             buttonEditRow_MMS.Image = (Image)resources.GetObject("buttonEditRow_MMS.Image");
-            buttonEditRow_MMS.Location = new Point(90, 26);
+            buttonEditRow_MMS.Location = new Point(100, 32);
             buttonEditRow_MMS.Name = "buttonEditRow_MMS";
-            buttonEditRow_MMS.Size = new Size(58, 58);
+            buttonEditRow_MMS.Size = new Size(68, 68);
             buttonEditRow_MMS.TabIndex = 4;
             toolTipWork_MMS.SetToolTip(buttonEditRow_MMS, "Режим редактирования");
             buttonEditRow_MMS.UseVisualStyleBackColor = false;
@@ -468,9 +481,9 @@
             buttonDelRow_MMS.BackColor = SystemColors.ButtonHighlight;
             buttonDelRow_MMS.Enabled = false;
             buttonDelRow_MMS.Image = Properties.Resources.table_row_delete;
-            buttonDelRow_MMS.Location = new Point(163, 26);
+            buttonDelRow_MMS.Location = new Point(183, 32);
             buttonDelRow_MMS.Name = "buttonDelRow_MMS";
-            buttonDelRow_MMS.Size = new Size(58, 58);
+            buttonDelRow_MMS.Size = new Size(68, 68);
             buttonDelRow_MMS.TabIndex = 3;
             toolTipWork_MMS.SetToolTip(buttonDelRow_MMS, "Удалить строку из таблицы");
             buttonDelRow_MMS.UseVisualStyleBackColor = false;
@@ -481,9 +494,9 @@
             buttonAddRow_MMS.BackColor = SystemColors.ButtonHighlight;
             buttonAddRow_MMS.Enabled = false;
             buttonAddRow_MMS.Image = (Image)resources.GetObject("buttonAddRow_MMS.Image");
-            buttonAddRow_MMS.Location = new Point(16, 26);
+            buttonAddRow_MMS.Location = new Point(16, 32);
             buttonAddRow_MMS.Name = "buttonAddRow_MMS";
-            buttonAddRow_MMS.Size = new Size(58, 58);
+            buttonAddRow_MMS.Size = new Size(68, 68);
             buttonAddRow_MMS.TabIndex = 2;
             toolTipWork_MMS.SetToolTip(buttonAddRow_MMS, "Добавить строку в таблицу");
             buttonAddRow_MMS.UseVisualStyleBackColor = false;
@@ -494,11 +507,11 @@
             tabPagePayInfo_MMS.BackColor = SystemColors.ControlLightLight;
             tabPagePayInfo_MMS.Controls.Add(panelMainPay_MMS);
             tabPagePayInfo_MMS.Controls.Add(panelTopPay_MMS);
-            tabPagePayInfo_MMS.Location = new Point(4, 29);
+            tabPagePayInfo_MMS.Location = new Point(4, 40);
             tabPagePayInfo_MMS.Margin = new Padding(4);
             tabPagePayInfo_MMS.Name = "tabPagePayInfo_MMS";
             tabPagePayInfo_MMS.Padding = new Padding(4);
-            tabPagePayInfo_MMS.Size = new Size(1223, 590);
+            tabPagePayInfo_MMS.Size = new Size(1447, 570);
             tabPagePayInfo_MMS.TabIndex = 1;
             tabPagePayInfo_MMS.Text = "Информация о платежах";
             // 
@@ -506,9 +519,9 @@
             // 
             panelMainPay_MMS.Controls.Add(dataGridViewPayStat_MMS);
             panelMainPay_MMS.Dock = DockStyle.Fill;
-            panelMainPay_MMS.Location = new Point(4, 113);
+            panelMainPay_MMS.Location = new Point(4, 128);
             panelMainPay_MMS.Name = "panelMainPay_MMS";
-            panelMainPay_MMS.Size = new Size(1215, 473);
+            panelMainPay_MMS.Size = new Size(1439, 438);
             panelMainPay_MMS.TabIndex = 2;
             // 
             // dataGridViewPayStat_MMS
@@ -522,30 +535,35 @@
             dataGridViewPayStat_MMS.Name = "dataGridViewPayStat_MMS";
             dataGridViewPayStat_MMS.ReadOnly = true;
             dataGridViewPayStat_MMS.RowHeadersVisible = false;
-            dataGridViewPayStat_MMS.Size = new Size(1215, 473);
+            dataGridViewPayStat_MMS.RowHeadersWidth = 62;
+            dataGridViewPayStat_MMS.Size = new Size(1439, 438);
             dataGridViewPayStat_MMS.TabIndex = 0;
             // 
             // ColumnNumberPay_MMS
             // 
             ColumnNumberPay_MMS.HeaderText = "Квартира";
+            ColumnNumberPay_MMS.MinimumWidth = 8;
             ColumnNumberPay_MMS.Name = "ColumnNumberPay_MMS";
             ColumnNumberPay_MMS.ReadOnly = true;
             // 
             // ColumnPeriod_MMS
             // 
             ColumnPeriod_MMS.HeaderText = "Период";
+            ColumnPeriod_MMS.MinimumWidth = 8;
             ColumnPeriod_MMS.Name = "ColumnPeriod_MMS";
             ColumnPeriod_MMS.ReadOnly = true;
             // 
             // ColumnSumPay_MMS
             // 
             ColumnSumPay_MMS.HeaderText = "Сумма оплаты";
+            ColumnSumPay_MMS.MinimumWidth = 8;
             ColumnSumPay_MMS.Name = "ColumnSumPay_MMS";
             ColumnSumPay_MMS.ReadOnly = true;
             // 
             // ColumnStatPay_MMS
             // 
             ColumnStatPay_MMS.HeaderText = "Статус оплаты";
+            ColumnStatPay_MMS.MinimumWidth = 8;
             ColumnStatPay_MMS.Name = "ColumnStatPay_MMS";
             ColumnStatPay_MMS.ReadOnly = true;
             // 
@@ -556,10 +574,10 @@
             panelTopPay_MMS.Controls.Add(groupBoxFilePay_MMS);
             panelTopPay_MMS.Controls.Add(groupBoxChangePay_MMS);
             panelTopPay_MMS.Dock = DockStyle.Top;
-            panelTopPay_MMS.Font = new Font("Adobe Garamond Pro Bold", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            panelTopPay_MMS.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             panelTopPay_MMS.Location = new Point(4, 4);
             panelTopPay_MMS.Name = "panelTopPay_MMS";
-            panelTopPay_MMS.Size = new Size(1215, 109);
+            panelTopPay_MMS.Size = new Size(1439, 124);
             panelTopPay_MMS.TabIndex = 1;
             // 
             // groupBoxFilterPay_MMS
@@ -568,9 +586,10 @@
             groupBoxFilterPay_MMS.Controls.Add(comboBoxStatusPay_MMS);
             groupBoxFilterPay_MMS.Controls.Add(buttonFilterPay_MMS);
             groupBoxFilterPay_MMS.Controls.Add(labelStatusPay_MMS);
-            groupBoxFilterPay_MMS.Location = new Point(564, 4);
+            groupBoxFilterPay_MMS.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Bold);
+            groupBoxFilterPay_MMS.Location = new Point(636, 4);
             groupBoxFilterPay_MMS.Name = "groupBoxFilterPay_MMS";
-            groupBoxFilterPay_MMS.Size = new Size(647, 94);
+            groupBoxFilterPay_MMS.Size = new Size(796, 117);
             groupBoxFilterPay_MMS.TabIndex = 4;
             groupBoxFilterPay_MMS.TabStop = false;
             groupBoxFilterPay_MMS.Text = "Фильтрация по статусу оплаты";
@@ -579,9 +598,9 @@
             // 
             buttonClearFilterPay_MMS.BackColor = SystemColors.ButtonHighlight;
             buttonClearFilterPay_MMS.Enabled = false;
-            buttonClearFilterPay_MMS.Location = new Point(220, 56);
+            buttonClearFilterPay_MMS.Location = new Point(517, 60);
             buttonClearFilterPay_MMS.Name = "buttonClearFilterPay_MMS";
-            buttonClearFilterPay_MMS.Size = new Size(158, 28);
+            buttonClearFilterPay_MMS.Size = new Size(211, 37);
             buttonClearFilterPay_MMS.TabIndex = 6;
             buttonClearFilterPay_MMS.Text = "Сброс фильтра";
             toolTipWork_MMS.SetToolTip(buttonClearFilterPay_MMS, "Отменить настройки фильтра");
@@ -590,20 +609,20 @@
             // 
             // comboBoxStatusPay_MMS
             // 
-            comboBoxStatusPay_MMS.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            comboBoxStatusPay_MMS.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 204);
             comboBoxStatusPay_MMS.FormattingEnabled = true;
-            comboBoxStatusPay_MMS.Location = new Point(6, 46);
+            comboBoxStatusPay_MMS.Location = new Point(6, 60);
             comboBoxStatusPay_MMS.Name = "comboBoxStatusPay_MMS";
-            comboBoxStatusPay_MMS.Size = new Size(187, 28);
+            comboBoxStatusPay_MMS.Size = new Size(272, 36);
             comboBoxStatusPay_MMS.TabIndex = 5;
             // 
             // buttonFilterPay_MMS
             // 
             buttonFilterPay_MMS.BackColor = SystemColors.ButtonHighlight;
             buttonFilterPay_MMS.Enabled = false;
-            buttonFilterPay_MMS.Location = new Point(220, 23);
+            buttonFilterPay_MMS.Location = new Point(300, 60);
             buttonFilterPay_MMS.Name = "buttonFilterPay_MMS";
-            buttonFilterPay_MMS.Size = new Size(158, 28);
+            buttonFilterPay_MMS.Size = new Size(211, 37);
             buttonFilterPay_MMS.TabIndex = 4;
             buttonFilterPay_MMS.Text = "Отфильтровать";
             toolTipWork_MMS.SetToolTip(buttonFilterPay_MMS, "Фильтрация данных");
@@ -613,10 +632,10 @@
             // labelStatusPay_MMS
             // 
             labelStatusPay_MMS.AutoSize = true;
-            labelStatusPay_MMS.Font = new Font("Adobe Garamond Pro", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelStatusPay_MMS.Location = new Point(6, 23);
+            labelStatusPay_MMS.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            labelStatusPay_MMS.Location = new Point(6, 28);
             labelStatusPay_MMS.Name = "labelStatusPay_MMS";
-            labelStatusPay_MMS.Size = new Size(187, 20);
+            labelStatusPay_MMS.Size = new Size(272, 26);
             labelStatusPay_MMS.TabIndex = 0;
             labelStatusPay_MMS.Text = "Выберите статус оплаты:";
             // 
@@ -624,10 +643,10 @@
             // 
             groupBoxFilePay_MMS.Controls.Add(buttonAddFilePay_MMS);
             groupBoxFilePay_MMS.Controls.Add(buttonSaveFilePay_MMS);
-            groupBoxFilePay_MMS.Font = new Font("Adobe Garamond Pro Bold", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            groupBoxFilePay_MMS.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Bold);
             groupBoxFilePay_MMS.Location = new Point(4, 4);
             groupBoxFilePay_MMS.Name = "groupBoxFilePay_MMS";
-            groupBoxFilePay_MMS.Size = new Size(150, 94);
+            groupBoxFilePay_MMS.Size = new Size(171, 114);
             groupBoxFilePay_MMS.TabIndex = 1;
             groupBoxFilePay_MMS.TabStop = false;
             groupBoxFilePay_MMS.Text = "Файл";
@@ -636,9 +655,9 @@
             // 
             buttonAddFilePay_MMS.BackColor = SystemColors.ButtonHighlight;
             buttonAddFilePay_MMS.Image = (Image)resources.GetObject("buttonAddFilePay_MMS.Image");
-            buttonAddFilePay_MMS.Location = new Point(6, 26);
+            buttonAddFilePay_MMS.Location = new Point(6, 35);
             buttonAddFilePay_MMS.Name = "buttonAddFilePay_MMS";
-            buttonAddFilePay_MMS.Size = new Size(58, 58);
+            buttonAddFilePay_MMS.Size = new Size(68, 68);
             buttonAddFilePay_MMS.TabIndex = 1;
             toolTipWork_MMS.SetToolTip(buttonAddFilePay_MMS, "Открыть файл формата .csv");
             buttonAddFilePay_MMS.UseVisualStyleBackColor = false;
@@ -649,9 +668,9 @@
             buttonSaveFilePay_MMS.BackColor = SystemColors.ButtonHighlight;
             buttonSaveFilePay_MMS.Enabled = false;
             buttonSaveFilePay_MMS.Image = (Image)resources.GetObject("buttonSaveFilePay_MMS.Image");
-            buttonSaveFilePay_MMS.Location = new Point(81, 26);
+            buttonSaveFilePay_MMS.Location = new Point(91, 35);
             buttonSaveFilePay_MMS.Name = "buttonSaveFilePay_MMS";
-            buttonSaveFilePay_MMS.Size = new Size(58, 58);
+            buttonSaveFilePay_MMS.Size = new Size(68, 68);
             buttonSaveFilePay_MMS.TabIndex = 0;
             toolTipWork_MMS.SetToolTip(buttonSaveFilePay_MMS, "Сохранить файл в формате .csv");
             buttonSaveFilePay_MMS.UseVisualStyleBackColor = false;
@@ -664,10 +683,10 @@
             groupBoxChangePay_MMS.Controls.Add(buttonEditRowPay_MMS);
             groupBoxChangePay_MMS.Controls.Add(buttonDelRowPay_MMS);
             groupBoxChangePay_MMS.Controls.Add(buttonAddRowPay_MMS);
-            groupBoxChangePay_MMS.Font = new Font("Adobe Garamond Pro Bold", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBoxChangePay_MMS.Location = new Point(175, 4);
+            groupBoxChangePay_MMS.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Bold);
+            groupBoxChangePay_MMS.Location = new Point(181, 4);
             groupBoxChangePay_MMS.Name = "groupBoxChangePay_MMS";
-            groupBoxChangePay_MMS.Size = new Size(383, 94);
+            groupBoxChangePay_MMS.Size = new Size(449, 114);
             groupBoxChangePay_MMS.TabIndex = 0;
             groupBoxChangePay_MMS.TabStop = false;
             groupBoxChangePay_MMS.Text = "Изменение данных";
@@ -678,9 +697,9 @@
             buttonMarkPaid_MMS.Enabled = false;
             buttonMarkPaid_MMS.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonMarkPaid_MMS.Image = (Image)resources.GetObject("buttonMarkPaid_MMS.Image");
-            buttonMarkPaid_MMS.Location = new Point(310, 26);
+            buttonMarkPaid_MMS.Location = new Point(361, 35);
             buttonMarkPaid_MMS.Name = "buttonMarkPaid_MMS";
-            buttonMarkPaid_MMS.Size = new Size(58, 58);
+            buttonMarkPaid_MMS.Size = new Size(68, 68);
             buttonMarkPaid_MMS.TabIndex = 5;
             toolTipWork_MMS.SetToolTip(buttonMarkPaid_MMS, "Отметить как \"Оплачено\"");
             buttonMarkPaid_MMS.UseVisualStyleBackColor = false;
@@ -691,9 +710,9 @@
             buttonRefreshPay_MMS.BackColor = SystemColors.ButtonHighlight;
             buttonRefreshPay_MMS.Enabled = false;
             buttonRefreshPay_MMS.Image = (Image)resources.GetObject("buttonRefreshPay_MMS.Image");
-            buttonRefreshPay_MMS.Location = new Point(236, 26);
+            buttonRefreshPay_MMS.Location = new Point(275, 35);
             buttonRefreshPay_MMS.Name = "buttonRefreshPay_MMS";
-            buttonRefreshPay_MMS.Size = new Size(58, 58);
+            buttonRefreshPay_MMS.Size = new Size(68, 68);
             buttonRefreshPay_MMS.TabIndex = 1;
             toolTipWork_MMS.SetToolTip(buttonRefreshPay_MMS, "Обновить данные из файла");
             buttonRefreshPay_MMS.UseVisualStyleBackColor = false;
@@ -704,9 +723,9 @@
             buttonEditRowPay_MMS.BackColor = SystemColors.ButtonHighlight;
             buttonEditRowPay_MMS.Enabled = false;
             buttonEditRowPay_MMS.Image = (Image)resources.GetObject("buttonEditRowPay_MMS.Image");
-            buttonEditRowPay_MMS.Location = new Point(90, 26);
+            buttonEditRowPay_MMS.Location = new Point(103, 35);
             buttonEditRowPay_MMS.Name = "buttonEditRowPay_MMS";
-            buttonEditRowPay_MMS.Size = new Size(58, 58);
+            buttonEditRowPay_MMS.Size = new Size(68, 68);
             buttonEditRowPay_MMS.TabIndex = 4;
             toolTipWork_MMS.SetToolTip(buttonEditRowPay_MMS, "Режим редактирования");
             buttonEditRowPay_MMS.UseVisualStyleBackColor = false;
@@ -717,9 +736,9 @@
             buttonDelRowPay_MMS.BackColor = SystemColors.ButtonHighlight;
             buttonDelRowPay_MMS.Enabled = false;
             buttonDelRowPay_MMS.Image = Properties.Resources.table_row_delete;
-            buttonDelRowPay_MMS.Location = new Point(163, 26);
+            buttonDelRowPay_MMS.Location = new Point(191, 35);
             buttonDelRowPay_MMS.Name = "buttonDelRowPay_MMS";
-            buttonDelRowPay_MMS.Size = new Size(58, 58);
+            buttonDelRowPay_MMS.Size = new Size(68, 68);
             buttonDelRowPay_MMS.TabIndex = 3;
             toolTipWork_MMS.SetToolTip(buttonDelRowPay_MMS, "Удалить строку из таблицы");
             buttonDelRowPay_MMS.UseVisualStyleBackColor = false;
@@ -730,9 +749,9 @@
             buttonAddRowPay_MMS.BackColor = SystemColors.ButtonHighlight;
             buttonAddRowPay_MMS.Enabled = false;
             buttonAddRowPay_MMS.Image = (Image)resources.GetObject("buttonAddRowPay_MMS.Image");
-            buttonAddRowPay_MMS.Location = new Point(16, 26);
+            buttonAddRowPay_MMS.Location = new Point(17, 35);
             buttonAddRowPay_MMS.Name = "buttonAddRowPay_MMS";
-            buttonAddRowPay_MMS.Size = new Size(58, 58);
+            buttonAddRowPay_MMS.Size = new Size(68, 68);
             buttonAddRowPay_MMS.TabIndex = 2;
             toolTipWork_MMS.SetToolTip(buttonAddRowPay_MMS, "Добавить строку в таблицу");
             buttonAddRowPay_MMS.UseVisualStyleBackColor = false;
@@ -745,17 +764,17 @@
             tabPageStat_MMS.Controls.Add(panelRight_Stat);
             tabPageStat_MMS.Controls.Add(panelLeftStat_MMS);
             tabPageStat_MMS.Controls.Add(panelHeaderStat_MMS);
-            tabPageStat_MMS.Location = new Point(4, 29);
+            tabPageStat_MMS.Location = new Point(4, 34);
             tabPageStat_MMS.Name = "tabPageStat_MMS";
-            tabPageStat_MMS.Size = new Size(1223, 590);
+            tabPageStat_MMS.Size = new Size(1447, 576);
             tabPageStat_MMS.TabIndex = 3;
             tabPageStat_MMS.Text = "Статистика и графики";
             // 
             // splitterCenterStat_MMS
             // 
-            splitterCenterStat_MMS.Location = new Point(618, 53);
+            splitterCenterStat_MMS.Location = new Point(618, 64);
             splitterCenterStat_MMS.Name = "splitterCenterStat_MMS";
-            splitterCenterStat_MMS.Size = new Size(3, 537);
+            splitterCenterStat_MMS.Size = new Size(3, 512);
             splitterCenterStat_MMS.TabIndex = 3;
             splitterCenterStat_MMS.TabStop = false;
             // 
@@ -765,18 +784,19 @@
             panelRight_Stat.Controls.Add(groupBoxTypesOfAppatments_MMS);
             panelRight_Stat.Controls.Add(groupBoxFamilyStat_MMS);
             panelRight_Stat.Dock = DockStyle.Fill;
-            panelRight_Stat.Location = new Point(618, 53);
+            panelRight_Stat.Location = new Point(618, 64);
             panelRight_Stat.Name = "panelRight_Stat";
-            panelRight_Stat.Size = new Size(605, 537);
+            panelRight_Stat.Size = new Size(829, 512);
             panelRight_Stat.TabIndex = 2;
             // 
             // groupBoxTypesOfAppatments_MMS
             // 
             groupBoxTypesOfAppatments_MMS.Controls.Add(chartTypesStat_MMS);
             groupBoxTypesOfAppatments_MMS.Dock = DockStyle.Fill;
+            groupBoxTypesOfAppatments_MMS.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
             groupBoxTypesOfAppatments_MMS.Location = new Point(0, 262);
             groupBoxTypesOfAppatments_MMS.Name = "groupBoxTypesOfAppatments_MMS";
-            groupBoxTypesOfAppatments_MMS.Size = new Size(605, 275);
+            groupBoxTypesOfAppatments_MMS.Size = new Size(829, 250);
             groupBoxTypesOfAppatments_MMS.TabIndex = 3;
             groupBoxTypesOfAppatments_MMS.TabStop = false;
             groupBoxTypesOfAppatments_MMS.Text = "Распределение по типам квартир";
@@ -788,7 +808,7 @@
             chartTypesStat_MMS.Dock = DockStyle.Fill;
             legend1.Name = "Legend1";
             chartTypesStat_MMS.Legends.Add(legend1);
-            chartTypesStat_MMS.Location = new Point(3, 23);
+            chartTypesStat_MMS.Location = new Point(3, 33);
             chartTypesStat_MMS.Name = "chartTypesStat_MMS";
             chartTypesStat_MMS.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             series1.ChartArea = "ChartArea1";
@@ -796,7 +816,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             chartTypesStat_MMS.Series.Add(series1);
-            chartTypesStat_MMS.Size = new Size(599, 249);
+            chartTypesStat_MMS.Size = new Size(823, 214);
             chartTypesStat_MMS.TabIndex = 1;
             chartTypesStat_MMS.Text = "chart2";
             // 
@@ -804,9 +824,10 @@
             // 
             groupBoxFamilyStat_MMS.Controls.Add(chartKidsStat_MMS);
             groupBoxFamilyStat_MMS.Dock = DockStyle.Top;
+            groupBoxFamilyStat_MMS.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
             groupBoxFamilyStat_MMS.Location = new Point(0, 0);
             groupBoxFamilyStat_MMS.Name = "groupBoxFamilyStat_MMS";
-            groupBoxFamilyStat_MMS.Size = new Size(605, 262);
+            groupBoxFamilyStat_MMS.Size = new Size(829, 262);
             groupBoxFamilyStat_MMS.TabIndex = 1;
             groupBoxFamilyStat_MMS.TabStop = false;
             groupBoxFamilyStat_MMS.Text = "Семейная статистика";
@@ -818,7 +839,7 @@
             chartKidsStat_MMS.Dock = DockStyle.Fill;
             legend2.Name = "Legend1";
             chartKidsStat_MMS.Legends.Add(legend2);
-            chartKidsStat_MMS.Location = new Point(3, 23);
+            chartKidsStat_MMS.Location = new Point(3, 33);
             chartKidsStat_MMS.Name = "chartKidsStat_MMS";
             chartKidsStat_MMS.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             series2.ChartArea = "ChartArea1";
@@ -827,7 +848,7 @@
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             chartKidsStat_MMS.Series.Add(series2);
-            chartKidsStat_MMS.Size = new Size(599, 236);
+            chartKidsStat_MMS.Size = new Size(823, 226);
             chartKidsStat_MMS.TabIndex = 0;
             chartKidsStat_MMS.Text = "chart1";
             // 
@@ -837,18 +858,19 @@
             panelLeftStat_MMS.Controls.Add(groupBoxPayStat_MMS);
             panelLeftStat_MMS.Controls.Add(groupBoxMainMetrics_MMS);
             panelLeftStat_MMS.Dock = DockStyle.Left;
-            panelLeftStat_MMS.Location = new Point(0, 53);
+            panelLeftStat_MMS.Location = new Point(0, 64);
             panelLeftStat_MMS.Name = "panelLeftStat_MMS";
-            panelLeftStat_MMS.Size = new Size(618, 537);
+            panelLeftStat_MMS.Size = new Size(618, 512);
             panelLeftStat_MMS.TabIndex = 1;
             // 
             // groupBoxPayStat_MMS
             // 
             groupBoxPayStat_MMS.Controls.Add(panelBars_MMS);
             groupBoxPayStat_MMS.Dock = DockStyle.Fill;
+            groupBoxPayStat_MMS.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
             groupBoxPayStat_MMS.Location = new Point(0, 262);
             groupBoxPayStat_MMS.Name = "groupBoxPayStat_MMS";
-            groupBoxPayStat_MMS.Size = new Size(618, 275);
+            groupBoxPayStat_MMS.Size = new Size(618, 250);
             groupBoxPayStat_MMS.TabIndex = 2;
             groupBoxPayStat_MMS.TabStop = false;
             groupBoxPayStat_MMS.Text = "Платежи за ноябрь 2025";
@@ -856,9 +878,9 @@
             // panelBars_MMS
             // 
             panelBars_MMS.Dock = DockStyle.Fill;
-            panelBars_MMS.Location = new Point(3, 23);
+            panelBars_MMS.Location = new Point(3, 33);
             panelBars_MMS.Name = "panelBars_MMS";
-            panelBars_MMS.Size = new Size(612, 249);
+            panelBars_MMS.Size = new Size(612, 214);
             panelBars_MMS.TabIndex = 0;
             panelBars_MMS.Paint += panelBars_MMS_Paint;
             // 
@@ -870,6 +892,7 @@
             groupBoxMainMetrics_MMS.Controls.Add(labelAllKv_MMS);
             groupBoxMainMetrics_MMS.Controls.Add(labelAllPeople_MMS);
             groupBoxMainMetrics_MMS.Dock = DockStyle.Top;
+            groupBoxMainMetrics_MMS.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
             groupBoxMainMetrics_MMS.Location = new Point(0, 0);
             groupBoxMainMetrics_MMS.Name = "groupBoxMainMetrics_MMS";
             groupBoxMainMetrics_MMS.Size = new Size(618, 262);
@@ -882,7 +905,7 @@
             labelMaksPloshad_MMS.AutoSize = true;
             labelMaksPloshad_MMS.Location = new Point(8, 221);
             labelMaksPloshad_MMS.Name = "labelMaksPloshad_MMS";
-            labelMaksPloshad_MMS.Size = new Size(259, 20);
+            labelMaksPloshad_MMS.Size = new Size(376, 30);
             labelMaksPloshad_MMS.TabIndex = 3;
             labelMaksPloshad_MMS.Text = "Максимальная площадь квартиры:";
             // 
@@ -891,7 +914,7 @@
             labelMinPloshad_MMS.AutoSize = true;
             labelMinPloshad_MMS.Location = new Point(8, 171);
             labelMinPloshad_MMS.Name = "labelMinPloshad_MMS";
-            labelMinPloshad_MMS.Size = new Size(250, 20);
+            labelMinPloshad_MMS.Size = new Size(364, 30);
             labelMinPloshad_MMS.TabIndex = 2;
             labelMinPloshad_MMS.Text = "Минимальная площадь квартиры";
             // 
@@ -900,7 +923,7 @@
             labelSrPloshad_MMS.AutoSize = true;
             labelSrPloshad_MMS.Location = new Point(8, 124);
             labelSrPloshad_MMS.Name = "labelSrPloshad_MMS";
-            labelSrPloshad_MMS.Size = new Size(213, 20);
+            labelSrPloshad_MMS.Size = new Size(312, 30);
             labelSrPloshad_MMS.TabIndex = 1;
             labelSrPloshad_MMS.Text = "Средняя площадь квартиры:";
             // 
@@ -909,7 +932,7 @@
             labelAllKv_MMS.AutoSize = true;
             labelAllKv_MMS.Location = new Point(8, 33);
             labelAllKv_MMS.Name = "labelAllKv_MMS";
-            labelAllKv_MMS.Size = new Size(113, 20);
+            labelAllKv_MMS.Size = new Size(164, 30);
             labelAllKv_MMS.TabIndex = 0;
             labelAllKv_MMS.Text = "Всего квартир:";
             // 
@@ -918,7 +941,7 @@
             labelAllPeople_MMS.AutoSize = true;
             labelAllPeople_MMS.Location = new Point(8, 78);
             labelAllPeople_MMS.Name = "labelAllPeople_MMS";
-            labelAllPeople_MMS.Size = new Size(119, 20);
+            labelAllPeople_MMS.Size = new Size(174, 30);
             labelAllPeople_MMS.TabIndex = 4;
             labelAllPeople_MMS.Text = "Всего жильцов:";
             // 
@@ -931,18 +954,18 @@
             panelHeaderStat_MMS.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             panelHeaderStat_MMS.Location = new Point(0, 0);
             panelHeaderStat_MMS.Name = "panelHeaderStat_MMS";
-            panelHeaderStat_MMS.Size = new Size(1223, 53);
+            panelHeaderStat_MMS.Size = new Size(1447, 64);
             panelHeaderStat_MMS.TabIndex = 0;
             // 
             // labelHeaderStat_MMS
             // 
             labelHeaderStat_MMS.Anchor = AnchorStyles.None;
             labelHeaderStat_MMS.AutoSize = true;
-            labelHeaderStat_MMS.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            labelHeaderStat_MMS.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 204);
             labelHeaderStat_MMS.ForeColor = Color.Black;
-            labelHeaderStat_MMS.Location = new Point(522, 10);
+            labelHeaderStat_MMS.Location = new Point(559, 10);
             labelHeaderStat_MMS.Name = "labelHeaderStat_MMS";
-            labelHeaderStat_MMS.Size = new Size(215, 30);
+            labelHeaderStat_MMS.Size = new Size(287, 38);
             labelHeaderStat_MMS.TabIndex = 0;
             labelHeaderStat_MMS.Text = "Аналитика по дому";
             labelHeaderStat_MMS.TextAlign = ContentAlignment.TopCenter;
@@ -950,37 +973,38 @@
             // menuStripMain_MMS
             // 
             menuStripMain_MMS.BackColor = Color.Transparent;
+            menuStripMain_MMS.ImageScalingSize = new Size(24, 24);
             menuStripMain_MMS.Items.AddRange(new ToolStripItem[] { файлToolStripMenuItem_MMS, справкаToolStripMenuItem_MMS, видToolStripMenuItem_MMS });
             menuStripMain_MMS.Location = new Point(0, 0);
             menuStripMain_MMS.Name = "menuStripMain_MMS";
-            menuStripMain_MMS.Size = new Size(1231, 24);
+            menuStripMain_MMS.Size = new Size(1455, 33);
             menuStripMain_MMS.TabIndex = 1;
             // 
             // файлToolStripMenuItem_MMS
             // 
             файлToolStripMenuItem_MMS.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuItemOpenFile_MMS, toolStripMenuItemSaveFile_MMS, выходToolStripMenuItem_MMS });
             файлToolStripMenuItem_MMS.Name = "файлToolStripMenuItem_MMS";
-            файлToolStripMenuItem_MMS.Size = new Size(48, 20);
+            файлToolStripMenuItem_MMS.Size = new Size(69, 29);
             файлToolStripMenuItem_MMS.Text = "Файл";
             // 
             // toolStripMenuItemOpenFile_MMS
             // 
             toolStripMenuItemOpenFile_MMS.DropDownItems.AddRange(new ToolStripItem[] { базаДанныхToolStripMenuItem, информацияОПлатежахToolStripMenuItem });
             toolStripMenuItemOpenFile_MMS.Name = "toolStripMenuItemOpenFile_MMS";
-            toolStripMenuItemOpenFile_MMS.Size = new Size(165, 22);
+            toolStripMenuItemOpenFile_MMS.Size = new Size(245, 34);
             toolStripMenuItemOpenFile_MMS.Text = "Открыть файл";
             // 
             // базаДанныхToolStripMenuItem
             // 
             базаДанныхToolStripMenuItem.Name = "базаДанныхToolStripMenuItem";
-            базаДанныхToolStripMenuItem.Size = new Size(213, 22);
+            базаДанныхToolStripMenuItem.Size = new Size(318, 34);
             базаДанныхToolStripMenuItem.Text = "База данных";
             базаДанныхToolStripMenuItem.Click += buttonAddFile_MMS_Click;
             // 
             // информацияОПлатежахToolStripMenuItem
             // 
             информацияОПлатежахToolStripMenuItem.Name = "информацияОПлатежахToolStripMenuItem";
-            информацияОПлатежахToolStripMenuItem.Size = new Size(213, 22);
+            информацияОПлатежахToolStripMenuItem.Size = new Size(318, 34);
             информацияОПлатежахToolStripMenuItem.Text = "Информация о платежах";
             информацияОПлатежахToolStripMenuItem.Click += buttonAddFilePay_MMS_Click;
             // 
@@ -988,27 +1012,27 @@
             // 
             toolStripMenuItemSaveFile_MMS.DropDownItems.AddRange(new ToolStripItem[] { базаДанныхToolStripMenuItem1, информацияОПлатежахToolStripMenuItem1 });
             toolStripMenuItemSaveFile_MMS.Name = "toolStripMenuItemSaveFile_MMS";
-            toolStripMenuItemSaveFile_MMS.Size = new Size(165, 22);
+            toolStripMenuItemSaveFile_MMS.Size = new Size(245, 34);
             toolStripMenuItemSaveFile_MMS.Text = "Сохранить файл";
             // 
             // базаДанныхToolStripMenuItem1
             // 
             базаДанныхToolStripMenuItem1.Name = "базаДанныхToolStripMenuItem1";
-            базаДанныхToolStripMenuItem1.Size = new Size(213, 22);
+            базаДанныхToolStripMenuItem1.Size = new Size(318, 34);
             базаДанныхToolStripMenuItem1.Text = "База данных";
             базаДанныхToolStripMenuItem1.Click += buttonSaveFile_MMS_Click;
             // 
             // информацияОПлатежахToolStripMenuItem1
             // 
             информацияОПлатежахToolStripMenuItem1.Name = "информацияОПлатежахToolStripMenuItem1";
-            информацияОПлатежахToolStripMenuItem1.Size = new Size(213, 22);
+            информацияОПлатежахToolStripMenuItem1.Size = new Size(318, 34);
             информацияОПлатежахToolStripMenuItem1.Text = "Информация о платежах";
             информацияОПлатежахToolStripMenuItem1.Click += buttonSaveFilePay_MMS_Click;
             // 
             // выходToolStripMenuItem_MMS
             // 
             выходToolStripMenuItem_MMS.Name = "выходToolStripMenuItem_MMS";
-            выходToolStripMenuItem_MMS.Size = new Size(165, 22);
+            выходToolStripMenuItem_MMS.Size = new Size(245, 34);
             выходToolStripMenuItem_MMS.Text = "Выход";
             выходToolStripMenuItem_MMS.Click += выходToolStripMenuItem_MMS_Click;
             // 
@@ -1016,41 +1040,34 @@
             // 
             справкаToolStripMenuItem_MMS.DropDownItems.AddRange(new ToolStripItem[] { оПрограммеToolStripMenuItem_MMS, руководствоПользователяToolStripMenuItem_MMS });
             справкаToolStripMenuItem_MMS.Name = "справкаToolStripMenuItem_MMS";
-            справкаToolStripMenuItem_MMS.Size = new Size(65, 20);
+            справкаToolStripMenuItem_MMS.Size = new Size(97, 29);
             справкаToolStripMenuItem_MMS.Text = "Справка";
             // 
             // оПрограммеToolStripMenuItem_MMS
             // 
             оПрограммеToolStripMenuItem_MMS.Name = "оПрограммеToolStripMenuItem_MMS";
-            оПрограммеToolStripMenuItem_MMS.Size = new Size(221, 22);
+            оПрограммеToolStripMenuItem_MMS.Size = new Size(336, 34);
             оПрограммеToolStripMenuItem_MMS.Text = "О программе";
             оПрограммеToolStripMenuItem_MMS.Click += оПрограммеToolStripMenuItem_MMS_Click;
             // 
             // руководствоПользователяToolStripMenuItem_MMS
             // 
             руководствоПользователяToolStripMenuItem_MMS.Name = "руководствоПользователяToolStripMenuItem_MMS";
-            руководствоПользователяToolStripMenuItem_MMS.Size = new Size(221, 22);
+            руководствоПользователяToolStripMenuItem_MMS.Size = new Size(336, 34);
             руководствоПользователяToolStripMenuItem_MMS.Text = "Руководство пользователя";
             руководствоПользователяToolStripMenuItem_MMS.Click += руководствоПользователяToolStripMenuItem_MMS_Click;
             // 
             // видToolStripMenuItem_MMS
             // 
-            видToolStripMenuItem_MMS.DropDownItems.AddRange(new ToolStripItem[] { сменитьТемуToolStripMenuItem_MMS, полноэкранныйРежимToolStripMenuItem_MMS });
+            видToolStripMenuItem_MMS.DropDownItems.AddRange(new ToolStripItem[] { полноэкранныйРежимToolStripMenuItem_MMS });
             видToolStripMenuItem_MMS.Name = "видToolStripMenuItem_MMS";
-            видToolStripMenuItem_MMS.Size = new Size(39, 20);
+            видToolStripMenuItem_MMS.Size = new Size(58, 29);
             видToolStripMenuItem_MMS.Text = "Вид";
-            // 
-            // сменитьТемуToolStripMenuItem_MMS
-            // 
-            сменитьТемуToolStripMenuItem_MMS.Name = "сменитьТемуToolStripMenuItem_MMS";
-            сменитьТемуToolStripMenuItem_MMS.Size = new Size(207, 22);
-            сменитьТемуToolStripMenuItem_MMS.Text = "Сменить тему";
-            сменитьТемуToolStripMenuItem_MMS.Click += сменитьТемуToolStripMenuItem_MMS_Click;
             // 
             // полноэкранныйРежимToolStripMenuItem_MMS
             // 
             полноэкранныйРежимToolStripMenuItem_MMS.Name = "полноэкранныйРежимToolStripMenuItem_MMS";
-            полноэкранныйРежимToolStripMenuItem_MMS.Size = new Size(207, 22);
+            полноэкранныйРежимToolStripMenuItem_MMS.Size = new Size(309, 34);
             полноэкранныйРежимToolStripMenuItem_MMS.Text = "Полноэкранный режим";
             полноэкранныйРежимToolStripMenuItem_MMS.Click += полноэкранныйРежимToolStripMenuItem_MMS_Click;
             // 
@@ -1070,10 +1087,10 @@
             // 
             // FormMain
             // 
-            AutoScaleDimensions = new SizeF(9F, 20F);
+            AutoScaleDimensions = new SizeF(13F, 31F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
-            ClientSize = new Size(1231, 647);
+            ClientSize = new Size(1455, 647);
             Controls.Add(tabControlMain_MMS);
             Controls.Add(menuStripMain_MMS);
             Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 204);
@@ -1133,7 +1150,6 @@
         private ToolStripMenuItem оПрограммеToolStripMenuItem_MMS;
         private ToolStripMenuItem руководствоПользователяToolStripMenuItem_MMS;
         private ToolStripMenuItem видToolStripMenuItem_MMS;
-        private ToolStripMenuItem сменитьТемуToolStripMenuItem_MMS;
         private Panel panelTools_MMS;
         private GroupBox groupBoxChange_MMS;
         private Button buttonRefresh_MMS;

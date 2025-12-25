@@ -36,10 +36,11 @@
             // labelInformation_MMS
             // 
             labelInformation_MMS.AutoSize = true;
-            labelInformation_MMS.Font = new Font("Segoe UI Symbol", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelInformation_MMS.Location = new Point(2, 9);
+            labelInformation_MMS.Font = new Font("Segoe UI Symbol", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelInformation_MMS.Location = new Point(13, 26);
+            labelInformation_MMS.Margin = new Padding(4, 0, 4, 0);
             labelInformation_MMS.Name = "labelInformation_MMS";
-            labelInformation_MMS.Size = new Size(755, 260);
+            labelInformation_MMS.Size = new Size(1102, 390);
             labelInformation_MMS.TabIndex = 0;
             labelInformation_MMS.Text = resources.GetString("labelInformation_MMS.Text");
             // 
@@ -47,10 +48,9 @@
             // 
             buttonOk_MMS.BackgroundImageLayout = ImageLayout.Stretch;
             buttonOk_MMS.FlatStyle = FlatStyle.System;
-            buttonOk_MMS.Location = new Point(642, 265);
-            buttonOk_MMS.Margin = new Padding(2);
+            buttonOk_MMS.Location = new Point(976, 434);
             buttonOk_MMS.Name = "buttonOk_MMS";
-            buttonOk_MMS.Size = new Size(97, 22);
+            buttonOk_MMS.Size = new Size(139, 37);
             buttonOk_MMS.TabIndex = 3;
             buttonOk_MMS.Text = "OK";
             buttonOk_MMS.UseVisualStyleBackColor = true;
@@ -58,12 +58,13 @@
             // 
             // FormInfo
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(761, 298);
+            ClientSize = new Size(1129, 497);
             Controls.Add(buttonOk_MMS);
             Controls.Add(labelInformation_MMS);
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            Margin = new Padding(4, 5, 4, 5);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormInfo";

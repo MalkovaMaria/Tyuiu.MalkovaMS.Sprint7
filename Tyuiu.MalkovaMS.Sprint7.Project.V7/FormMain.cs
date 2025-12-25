@@ -220,6 +220,7 @@ namespace Tyuiu.MalkovaMS.Sprint7.Project.V7
 
                 UpdateStatistics();
                 UpdateCharts();
+                dataGridViewTable_MMS.SelectionMode = DataGridViewSelectionMode.RowHeaderSelect;
             }
             catch (Exception ex)
             {
@@ -526,6 +527,7 @@ namespace Tyuiu.MalkovaMS.Sprint7.Project.V7
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
                 UpdateStatistics();
                 UpdateCharts();
+                dataGridViewPayStat_MMS.SelectionMode = DataGridViewSelectionMode.RowHeaderSelect;
             }
             catch (Exception ex)
             {
@@ -905,10 +907,6 @@ namespace Tyuiu.MalkovaMS.Sprint7.Project.V7
             this.Close();
         }
 
-        private void ñìåíèòüÒåìóToolStripMenuItem_MMS_Click(object sender, EventArgs e)
-        {
-
-        }
         private bool isFullScreen = false;
         private void ïîëíîıêğàííûéĞåæèìToolStripMenuItem_MMS_Click(object sender, EventArgs e)
         {
